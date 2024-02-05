@@ -1,0 +1,29 @@
+INT8CLIPTextModel(
+  (text_model): INT8CLIPTextTransformer(
+    (embeddings): CLIPTextEmbeddings(
+      (token_embedding): Embedding(49408, 768)
+      (position_embedding): Embedding(77, 768)
+    )
+    (encoder): INT8CLIPEncoder(
+      (layers): ModuleList(
+        (0-11): 12 x INT8CLIPEncoderLayer(
+          (layer_norm1): LayerNormQ()
+          (self_attn): INT8CLIPAttention(
+            (k_proj): W8A8B8O8Linear()
+            (v_proj): W8A8B8O8Linear()
+            (q_proj): W8A8B8O8Linear()
+            (out_proj): W8A8BFP32OFP32Linear()
+            (qk_bmm): BMM_S8T_S8N_F32T()
+            (pv_bmm): BMM_S8T_S8N_S8T()
+          )
+          (layer_norm2): LayerNormQ()
+          (mlp): INT8CLIPMLP(
+            (fc1): W8A8B8O8LinearReLU()
+            (fc2): W8A8BFP32OFP32Linear()
+          )
+        )
+      )
+    )
+    (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+)

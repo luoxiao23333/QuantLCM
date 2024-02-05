@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2  TRANSFORMERS_CACHE=./weights python app.py
