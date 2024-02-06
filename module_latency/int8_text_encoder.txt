@@ -1,0 +1,390 @@
+<class 'torch.nn.modules.sparse.Embedding'> take 0.00023655220866203308 secs for forwarding
+<class 'torch.nn.modules.sparse.Embedding'> take 2.9262155294418335e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.0004660487174987793 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 0.0002649761736392975 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 0.00023620203137397766 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 0.00010078027844429016 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.65347683429718e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00019730068743228912 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00012152455747127533 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 9.226053953170776e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0014027506113052368 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 8.227117359638214e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 9.274668991565704e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.424131035804749e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0002129431813955307 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.002101084217429161 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 8.045695722103119e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.806772530078888e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.619708776473999e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011118687689304352 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.703527808189392e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008709821850061417 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.56382942199707e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.422695100307465e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.005222141742706e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019632093608379364 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.001328999176621437 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.661432027816772e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 9.505264461040497e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.947534322738647e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.850117981433868e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010839290916919708 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011160410940647125 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.717497646808624e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008809715509414673 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.668696343898773e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.32490622997284e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.900541484355927e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001934599131345749 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013294871896505356 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.57761299610138e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.464790880680084e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.472746074199677e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.4729323387146e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010922923684120178 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010874122381210327 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.619708776473999e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008540842682123184 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.528811693191528e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.513592183589935e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.005222141742706e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019541196525096893 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013057421892881393 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.563456892967224e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.373893797397614e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.752329111099243e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.570534944534302e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011251308023929596 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.612816989421844e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008592512458562851 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.521547377109528e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.422881364822388e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.963126361370087e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019779056310653687 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.001314820721745491 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.521733641624451e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 0.00011439993977546692 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.521919906139374e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.0001078341156244278 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011216476559638977 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.431022822856903e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008832737803459167 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.759220898151398e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.32490622997284e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.00484961271286e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019590184092521667 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013370998203754425 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.612816989421844e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.513592183589935e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.570907473564148e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.521919906139374e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00011111795902252197 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.000110626220703125 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.612816989421844e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008587595075368881 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.514841854572296e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.373521268367767e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.914138793945312e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019541382789611816 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013081841170787811 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.472746074199677e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.702091872692108e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.431022822856903e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.521733641624451e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.0001083221286535263 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011062808334827423 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008539408445358276 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.98981636762619e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.506514132022858e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.012113928794861e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001972988247871399 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013118889182806015 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.472746074199677e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 0.00010922923684120178 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.612258195877075e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.570721209049225e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010874122381210327 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00013102032244205475 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 8.506514132022858e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0009182654321193695 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.724389433860779e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.415989577770233e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.095746695995331e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001949947327375412 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013678297400474548 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.528811693191528e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.37370753288269e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.661432027816772e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.472746074199677e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010979175567626953 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.710419595241547e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008638575673103333 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.522106170654297e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.276291191577911e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.005035877227783e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019632279872894287 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013147518038749695 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.325278759002686e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.619708776473999e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.612630724906921e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010964833199977875 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011111609637737274 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.424131035804749e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008549205958843231 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.857196033000946e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.513592183589935e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.900355219841003e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001954156905412674 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.001311885192990303 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.479824125766754e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.653104305267334e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.857009768486023e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.62641429901123e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010790489614009857 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011034868657588959 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.382221519947052e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008657462894916534 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.522106170654297e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.464418351650238e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.949156522750854e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019639171659946442 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013128630816936493 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoder'> take 0.016955921426415443 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 4.16245311498642e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPTextTransformer'> take 0.018153896555304527 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPTextModel'> take 0.0181935653090477 secs for forwarding
+Stage1: 2.304092049598694e-06; self.training: False output_hidden_states: False
+output_attentions: False
+Stage2.1: 0.001067792996764183
+Stage2.1: 0.0005549546331167221
+Stage2.1: 0.0005450360476970673
+Stage2.1: 0.0005421042442321777
+Stage2.1: 0.0005157031118869781
+Stage2.1: 0.0004944037646055222
+Stage2.1: 0.0004906989634037018
+Stage2.1: 0.0004920978099107742
+Stage2.1: 0.0004923753440380096
+Stage2.1: 0.0004920270293951035
+Stage2.1: 0.0004910510033369064
+Stage2.1: 0.00048776715993881226
+Stage2.1: 0.0004919562488794327
+Stage2.1: 0.0004986654967069626
+Stage2.1: 0.0005024336278438568
+Stage2.1: 0.0004916097968816757
+Stage2.1: 0.00048685818910598755
+Stage2.1: 0.0004892349243164062
+Stage2.1: 0.000491119921207428
+Stage2.1: 0.0004868600517511368
+Stage2.1: 0.000485321506857872
+Stage2.1: 0.0004925169050693512
+Stage2.1: 0.0005161222070455551
+Stage2.1: 0.0004872772842645645
+Stage2: 0.01297416165471077
+Stage3: 1.955777406692505e-06
+All Stage: 0.013063628226518631
+Encoder Called Repeatedly!
+Potential NSFW content was detected in one or more images. A black image will be returned instead. Try again with a different prompt and/or seed.
+2.7135770320892334
+<class 'torch.nn.modules.sparse.Embedding'> take 0.00011314265429973602 secs for forwarding
+<class 'torch.nn.modules.sparse.Embedding'> take 2.2629275918006897e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.00027677975594997406 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 0.0001286473125219345 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 0.00014715641736984253 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.324719965457916e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.996708154678345e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00014708377420902252 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00012536346912384033 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 8.366815745830536e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0010791756212711334 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.954798638820648e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.235445082187653e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0002247486263513565 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0016270801424980164 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.989630103111267e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.98856669664383e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.808208465576172e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.087605237960815e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00011209584772586823 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011258386075496674 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.619522511959076e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008738469332456589 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.661618292331696e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.618086576461792e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.046759128570557e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019674189388751984 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013284403830766678 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.759407162666321e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.422881364822388e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.661618292331696e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.479824125766754e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.0001093689352273941 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010923296213150024 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.480010390281677e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008586924523115158 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.626600563526154e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.283182978630066e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.095746695995331e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001949947327375412 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013095811009407043 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.612816989421844e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.324719965457916e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.612630724906921e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.521733641624451e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011125579476356506 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.668696343898773e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008563157171010971 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.66124576330185e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 0.00011020898818969727 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.144734263420105e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0002218838781118393 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013313032686710358 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.661618292331696e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.325092494487762e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.375143468379974e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010874494910240173 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011020898818969727 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.514841854572296e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008520577102899551 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.56382942199707e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.513592183589935e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.046759128570557e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019639357924461365 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013034380972385406 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.668323814868927e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.32490622997284e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.521547377109528e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.612444460391998e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010922923684120178 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010972097516059875 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.612444460391998e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008516348898410797 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.808394730091095e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.422881364822388e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.095746695995331e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001962520182132721 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013044122606515884 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.373893797397614e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.570721209049225e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010881200432777405 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011356174945831299 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008549187332391739 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.563643157482147e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 0.00010601803660392761 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.144547998905182e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00021957792341709137 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013280920684337616 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.612444460391998e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.848682045936584e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.570721209049225e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.703341543674469e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010930188000202179 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00011020712554454803 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.382035255432129e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008572936058044434 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.564015686511993e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.618459105491638e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.039867341518402e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001977868378162384 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.001310070976614952 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.612630724906921e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.471682667732239e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.612816989421844e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010874122381210327 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010930001735687256 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008526146411895752 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.521733641624451e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.513592183589935e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.095932960510254e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019681081175804138 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013081859797239304 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.653290569782257e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.473118603229523e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.703527808189392e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00010881200432777405 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010881200432777405 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.3261559009552e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008516367524862289 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.4729323387146e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 9.93143767118454e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.144920527935028e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0002109874039888382 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013147499412298203 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.619522511959076e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.478574454784393e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.563643157482147e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.472746074199677e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.0001097898930311203 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010881200432777405 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.326342165470123e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008477959781885147 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.480010390281677e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.569657802581787e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.858445703983307e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.00019436702132225037 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0012987591326236725 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.570534944534302e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 8.415989577770233e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.626786828041077e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8Linear'> take 7.56382942199707e-05 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_F32T'> take 0.00011014007031917572 secs for forwarding
+<class 'torch_int.nn.bmm.BMM_S8T_S8N_S8T'> take 0.00010881200432777405 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 7.333233952522278e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPAttention'> take 0.0008600875735282898 secs for forwarding
+<class 'torch_int.nn.fused.LayerNormQ'> take 7.528811693191528e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8B8O8LinearReLU'> take 8.374080061912537e-05 secs for forwarding
+<class 'torch_int.nn.linear.W8A8BFP32OFP32Linear'> take 6.998144090175629e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPMLP'> take 0.0001939479261636734 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoderLayer'> take 0.0013104882091283798 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPEncoder'> take 0.01633475534617901 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.498978912830353e-05 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPTextTransformer'> take 0.01708938740193844 secs for forwarding
+<class 'quant.text_encoder.INT8CLIPTextModel'> take 0.017122000455856323 secs for forwarding
+Stage1: 1.8887221813201904e-06; self.training: False output_hidden_states: False
+output_attentions: False
+Stage2.1: 0.0008137840777635574
+Stage2.1: 0.0005479007959365845
+Stage2.1: 0.0005450360476970673
+Stage2.1: 0.0005425922572612762
+Stage2.1: 0.0005431529134511948
+Stage2.1: 0.0005402863025665283
+Stage2.1: 0.0005701072514057159
+Stage2.1: 0.0005402881652116776
+Stage2.1: 0.0005384013056755066
+Stage2.1: 0.0004958678036928177
+Stage2.1: 0.0004872754216194153
+Stage2.1: 0.0004929360002279282
+Stage2.1: 0.000491611659526825
+Stage2.1: 0.0004897229373455048
+Stage2.1: 0.0005175191909074783
+Stage2.1: 0.0004953090101480484
+Stage2.1: 0.0005005486309528351
+Stage2.1: 0.0005000606179237366
+Stage2.1: 0.0005062054842710495
+Stage2.1: 0.0004911180585622787
+Stage2.1: 0.00048776715993881226
+Stage2.1: 0.00048587843775749207
+Stage2.1: 0.0005162619054317474
+Stage2.1: 0.0005157720297574997
+Stage2: 0.01300070434808731
+Stage3: 1.8849968910217285e-06
+All Stage: 0.013104276731610298
+Encoder Called Repeatedly!
+Potential NSFW content was detected in one or more images. A black image will be returned instead. Try again with a different prompt and/or seed.
+0.4433155059814453

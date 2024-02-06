@@ -36,3 +36,15 @@ def print_tensor_dtypes(model):
     for name, buffer in model.named_buffers():
         if len(buffer.shape) >= 2 and (buffer.shape[-1] % 16 !=0 or buffer.shape[-2] % 16 != 0):
             print(f"Buffer {name}: dtype={buffer.dtype}, {buffer.shape}, n={buffer.nelement()}, ds={buffer.element_size()}")
+
+
+def print_modules_with_lora_layer(model):
+    # 遍历模型的所有子模块
+    for name, module in model.named_children():
+        # 检查是否包含名为 'lora_layer' 的子模块并且不为 None
+        if isinstance(module, torch.nn.Module) and hasattr(module, 'lora_layer') and module.lora_layer is not None:
+            print("Module with 'lora_layer' found in {}: {}, and lora_layer: {}".format(name, module, module.lora_layer))
+        
+        # 如果子模块还包含其他子模块，递归遍历它们
+        if isinstance(module, torch.nn.Module):
+            print_modules_with_lora_layer(module)

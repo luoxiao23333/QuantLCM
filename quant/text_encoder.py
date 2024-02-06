@@ -544,7 +544,7 @@ class INT8CLIPTextModel(clip.CLIPPreTrainedModel):
         ```"""
         return_dict = return_dict if return_dict is not None else self.config.use_return_dict
 
-        return self.text_model(
+        ans = self.text_model(
             input_ids=input_ids,
             attention_mask=attention_mask,
             position_ids=position_ids,
@@ -552,3 +552,35 @@ class INT8CLIPTextModel(clip.CLIPPreTrainedModel):
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
+        return ans
+
+
+import time
+def time_forward(
+        self,
+        *args,
+        **kwargs):
+        _time_forward_start_time = time.perf_counter()
+
+        ans = self.original_forward(
+            *args, **kwargs
+        )
+
+        print(f"{self.__class__} take {time.perf_counter()-_time_forward_start_time} secs for forwarding")
+        return ans
+
+clip.CLIPEncoder
+import types
+def replace_with_time_forward(model: torch.nn.Module, first=True):
+    if first:
+        model.original_forward = types.MethodType(type(model).forward, model)
+        model.forward = types.MethodType(time_forward, model)
+
+    for name, child in model.named_children():
+        if hasattr(child, 'forward'):
+            
+            child.original_forward = types.MethodType(type(child).forward, child)
+            child.forward = types.MethodType(time_forward, child)
+
+        if isinstance(child, torch.nn.Module):
+            replace_with_time_forward(child, False)

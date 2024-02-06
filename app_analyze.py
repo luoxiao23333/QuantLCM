@@ -63,11 +63,12 @@ pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", custom_
 pipe.to(torch_device=device, torch_dtype=DTYPE)
 
 from model_analyze import analyze, print_tensor_dtypes
-from model_analyze import write_model_arch
+from model_analyze import write_model_arch, print_modules_with_lora_layer
 #analyze(pipe.components['text_encoder'])
 # write_model_arch(pipe.components)
 unet = pipe.components['unet']
-print_tensor_dtypes(unet)
+print_modules_with_lora_layer(unet)
+print_modules_with_lora_layer(pipe.components['vae'])
 exit(0)
 
 

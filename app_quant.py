@@ -66,40 +66,51 @@ pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7")
 # pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", custom_pipeline="latent_consistency_txt2img", custom_revision="main")
 pipe.to(torch_device=device, torch_dtype=DTYPE)
 
-from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
-from model_analyze import write_model_arch
-from quant.text_encoder import INT8CLIPTextModel
-from quant.utils import copy_and_report_attributes
-text_encoder = deepcopy(pipe.components['text_encoder'])
-'''
-attn_input_scale: float,
-q_output_scale: float,
-k_output_scale: float,
-v_output_scale: float,
-out_input_scale: float,
-fc1_input_scale: float,
-fc2_input_scale: float
-'''
-int8_text_encoder = INT8CLIPTextModel.from_float(text_encoder, encoder_layer_scales=[{
-    "attn_input_scale": 1,
-    "q_output_scale": 1,
-    "k_output_scale": 1,
-    "v_output_scale": 1,
-    "out_input_scale": 1,
-    "fc1_input_scale": 1,
-    "fc2_input_scale": 1,
-} for _ in range(12)])
-components = getattr(pipe, 'components')
-components['text_encoder'] = int8_text_encoder
-pipe = LatentConsistencyModelPipeline(**components, requires_safety_checker=False)
-print(pipe.components['text_encoder'])
-# print(int8_text_encoder)
-print(f"int8: {model_memory_usage(int8_text_encoder)} Bytes")
-print(f"f32: {model_memory_usage(text_encoder)} Bytes")
-from model_analyze import print_tensor_dtypes
-print_tensor_dtypes(int8_text_encoder)
-# copy_and_report_attributes(text_encoder, int8_text_encoder)
-# exit(0)
+def replace_text_encoder(pipe, replace=True):
+    from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
+    from model_analyze import write_model_arch
+    from quant.text_encoder import INT8CLIPTextModel, replace_with_time_forward
+    from quant.utils import copy_and_report_attributes
+    text_encoder = deepcopy(pipe.components['text_encoder'])
+    '''
+    attn_input_scale: float,
+    q_output_scale: float,
+    k_output_scale: float,
+    v_output_scale: float,
+    out_input_scale: float,
+    fc1_input_scale: float,
+    fc2_input_scale: float
+    '''
+    components = getattr(pipe, 'components')
+    if replace:
+        int8_text_encoder = INT8CLIPTextModel.from_float(text_encoder, encoder_layer_scales=[{
+            "attn_input_scale": 1,
+            "q_output_scale": 1,
+            "k_output_scale": 1,
+            "v_output_scale": 1,
+            "out_input_scale": 1,
+            "fc1_input_scale": 1,
+            "fc2_input_scale": 1,
+        } for _ in range(12)])
+        components['text_encoder'] = int8_text_encoder
+        int8_text_encoder.eval()
+        replace_with_time_forward(int8_text_encoder)
+    else:
+        replace_with_time_forward(text_encoder)
+        text_encoder.eval()
+        components['text_encoder'] = text_encoder
+
+    pipe = LatentConsistencyModelPipeline(**components, requires_safety_checker=False)
+    # print(f"int8: {model_memory_usage(int8_text_encoder)} Bytes")
+    print(f"f32: {model_memory_usage(text_encoder)} Bytes")
+    from model_analyze import print_tensor_dtypes
+    # print_tensor_dtypes(int8_text_encoder)
+    # copy_and_report_attributes(text_encoder, int8_text_encoder)
+    # exit(0)
+    return pipe
+
+
+pipe = replace_text_encoder(pipe, True)
 
 def randomize_seed_fn(seed: int, randomize_seed: bool) -> int:
     if randomize_seed:
@@ -134,7 +145,6 @@ def generate(
     progress = gr.Progress(track_tqdm=True),
     profile: gr.OAuthProfile | None = None,
 ) -> PIL.Image.Image:
-    print(pipe.components['text_encoder'])
     seed = randomize_seed_fn(seed, randomize_seed)
     torch.manual_seed(seed)
     pipe.to(torch_device=device)
