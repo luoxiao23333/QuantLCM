@@ -92,9 +92,9 @@ def replace_text_encoder(pipe, replace=True):
             "fc1_input_scale": 1,
             "fc2_input_scale": 1,
         } for _ in range(12)])
-        components['text_encoder'] = int8_text_encoder
         int8_text_encoder.eval()
         replace_with_time_forward(int8_text_encoder)
+        components['text_encoder'] = int8_text_encoder
     else:
         replace_with_time_forward(text_encoder)
         text_encoder.eval()

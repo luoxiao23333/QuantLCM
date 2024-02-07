@@ -1,400 +1,304 @@
-<class 'torch.nn.modules.sparse.Embedding'> take 0.00174720399081707 secs for forwarding
-<class 'torch.nn.modules.sparse.Embedding'> take 3.785453736782074e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.0020447969436645508 secs for forwarding
-Stage1: 2.864748239517212e-06; self.training: False output_hidden_states: False
-output_attentions: False
-<class 'torch.nn.modules.normalization.LayerNorm'> take 0.00014848075807094574 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 1.0670926291495562 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 8.325278759002686e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.540702164173126e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 1.068258410319686 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 5.496479570865631e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 8.995458483695984e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 0.00012969225645065308 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 6.15287572145462e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00034920312464237213 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 1.0690669566392899 secs for forwarding
-Stage2.1: 1.0690981056541204
-<class 'torch.nn.modules.normalization.LayerNorm'> take 3.024190664291382e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.359280526638031e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.121979534626007e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041394680738449097 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7447938919067383e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.260241985321045e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.6874786019325256e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001716669648885727 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007465984672307968 secs for forwarding
-Stage2.1: 0.00077076256275177
-<class 'torch.nn.modules.normalization.LayerNorm'> take 3.121607005596161e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.3175572752952576e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.940557897090912e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7935951948165894e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170594573020935e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004007425159215927 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.64681875705719e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170967102050781e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.973953425884247e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.645569086074829e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016608275473117828 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007276013493537903 secs for forwarding
-Stage2.1: 0.0007475744932889938
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7377158403396606e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.9336661100387573e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.835690975189209e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212876617908478e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041073188185691833 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5561079382896423e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1147152185440063e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.973953425884247e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016272999346256256 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007271822541952133 secs for forwarding
-Stage2.1: 0.0007465258240699768
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8353184461593628e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.933107316493988e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8423964977264404e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.073178231716156e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039361976087093353 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6538968086242676e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.3663585782051086e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.0646642446517944e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.6388635635375977e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016419589519500732 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007069259881973267 secs for forwarding
-Stage2.1: 0.0007257871329784393
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6538968086242676e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.408268094062805e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7935951948165894e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.835690975189209e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039739347994327545 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6049092411994934e-05 secs for forwarding
+<class 'torch.nn.modules.sparse.Embedding'> take 0.0001405179500579834 secs for forwarding
+<class 'torch.nn.modules.sparse.Embedding'> take 3.1286850571632385e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.0003666635602712631 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 7.905997335910797e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 0.00015190429985523224 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.5060569643974304e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.071742296218872e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.26838344335556e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 4.01567667722702e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0011979751288890839 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.219582140445709e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 4.819035530090332e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 6.914325058460236e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 5.063600838184357e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0002380162477493286 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.001676175743341446 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.0312687158584595e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6384910345077515e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.024190664291382e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359466791152954e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00043475814163684845 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 0.00010972097516059875 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.687664866447449e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016698986291885376 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007181726396083832 secs for forwarding
-Stage2.1: 0.0007361192256212234
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7026981115341187e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.407895565032959e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.849474549293518e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.88449227809906e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.309229552745819e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.93204391002655e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00018500909209251404 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0008729379624128342 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 5.112402141094208e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.645569086074829e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.072991967201233e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.07280570268631e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.121979534626007e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004191827028989792 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6959925889968872e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.4572556614875793e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.211440682411194e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.883242607116699e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001736227422952652 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007792804390192032 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.9820948839187622e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.561750054359436e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003955084830522537 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7446076273918152e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9262155294418335e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.3175572752952576e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004182755947113037 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.170780837535858e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.2535364627838135e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 4.022940993309021e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001807473599910736 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007702037692070007 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.80085951089859e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6036595702171326e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.0308961868286133e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.0798837542533875e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004197414964437485 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7935951948165894e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.408268094062805e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.162639379501343e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.8271769881248474e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00017732568085193634 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007621720433235168 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.0310824513435364e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.121793270111084e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00045564211905002594 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.835504710674286e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.457069396972656e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.0784478187561035e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.834255039691925e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00017795339226722717 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.00080135278403759 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.505870699882507e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.024190664291382e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041303783655166626 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.849474549293518e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.4011900424957275e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.211440682411194e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.778375685214996e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001731347292661667 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007551182061433792 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.933293581008911e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 5.6220218539237976e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9334798455238342e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.024190664291382e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.121979534626007e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.000453755259513855 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8425827622413635e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.450177609920502e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.204362630844116e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.883056342601776e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00017550773918628693 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007944386452436447 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.9399991035461426e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.5060569643974304e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.024190664291382e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.310665488243103e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004263781011104584 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7935951948165894e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359280526638031e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.204362630844116e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.966875374317169e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00017739646136760712 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007688067853450775 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.589503467082977e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.037974238395691e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9824674129486084e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.2685697078704834e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041582994163036346 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8913840651512146e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.4013763070106506e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.1136518120765686e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.645569086074829e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001736227422952652 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007549785077571869 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8772279620170593e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.498978912830353e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.0800700187683105e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.212876617908478e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041673891246318817 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.88449227809906e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.3522024750709534e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 3.973953425884247e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.778375685214996e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001712515950202942 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007560234516859055 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.835504710674286e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.457069396972656e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.8915703296661377e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9752030968666077e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.26838344335556e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041303597390651703 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8425827622413635e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.408454358577728e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.169531166553497e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001736227422952652 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007479246705770493 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoder'> take 0.010584492236375809 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.170594573020935e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextTransformer'> take 0.011672679334878922 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextModel'> take 0.011730436235666275 secs for forwarding
+0.4501781463623047
+<class 'torch.nn.modules.sparse.Embedding'> take 0.0001130029559135437 secs for forwarding
+<class 'torch.nn.modules.sparse.Embedding'> take 2.2698193788528442e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.00029046833515167236 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 6.62095844745636e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 0.0007882211357355118 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.547966480255127e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261305391788483e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.3173710107803345e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0013276021927595139 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.072991967201233e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 5.2519142627716064e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 6.327591836452484e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 4.351325333118439e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00021671690046787262 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0017590057104825974 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7935951948165894e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.3522024750709534e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.065913915634155e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.0310824513435364e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.2685697078704834e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041485391557216644 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.835504710674286e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261677920818329e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.253163933753967e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6388635635375977e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016943365335464478 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007418449968099594 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 3.0312687158584595e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.4011900424957275e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261491656303406e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9824674129486084e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.1147152185440063e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00041352584958076477 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7867034077644348e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.408268094062805e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.16245311498642e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.736652433872223e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00017026998102664948 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.000863928347826004 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6959925889968872e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359094262123108e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9403716325759888e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.8913840651512146e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.97413969039917e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.680586814880371e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001637786626815796 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007116049528121948 secs for forwarding
-Stage2.1: 0.0007289983332157135
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004059839993715286 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7447938919067383e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.065913915634155e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.113838076591492e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.5898759961128235e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016608089208602905 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007295552641153336 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7447938919067383e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359466791152954e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.933293581008911e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.933107316493988e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004021432250738144 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.514384686946869e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261677920818329e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.113838076591492e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.7364661693573e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016608089208602905 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007220115512609482 secs for forwarding
 <class 'torch.nn.modules.normalization.LayerNorm'> take 2.7935951948165894e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8286129236221313e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.7446076273918152e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 2.88449227809906e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039501674473285675 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5492161512374878e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212876617908478e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.071742296218872e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.463961184024811e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00015895813703536987 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007039923220872879 secs for forwarding
-Stage2.1: 0.0007220115512609482
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.647005021572113e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7867034077644348e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.26838344335556e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.000393550843000412 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5073066353797913e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 7.005222141742706e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.785453736782074e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001959037035703659 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007389839738607407 secs for forwarding
-Stage2.1: 0.0007574912160634995
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7026981115341187e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.835504710674286e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1147152185440063e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003922265022993088 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.507120370864868e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.129057586193085e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003978833556175232 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7516856789588928e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.261491656303406e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.071742296218872e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.5550445318222046e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001612640917301178 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007002223283052444 secs for forwarding
-Stage2.1: 0.0007196366786956787
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7796253561973572e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219768404960632e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.940557897090912e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.80085951089859e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039271265268325806 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6538968086242676e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.9808452129364014e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.498978912830353e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001590251922607422 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007021073251962662 secs for forwarding
-Stage2.1: 0.0007209647446870804
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.695806324481964e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.2687559723854065e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.603845834732056e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004044491797685623 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5141984224319458e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.211626946926117e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6386772990226746e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016754679381847382 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007172618061304092 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6959925889968872e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359466791152954e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.8915703296661377e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.7935951948165894e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.022754728794098e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.547966480255127e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001614689826965332 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007158666849136353 secs for forwarding
-Stage2.1: 0.0007337480783462524
-Stage2: 1.0773128364235163
-Stage3: 1.955777406692505e-06
-All Stage: 1.0773607473820448
-Encoder Called Repeatedly!
-<class 'transformers.models.clip.modeling_clip.CLIPEncoder'> take 1.0774969328194857 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 3.261491656303406e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextTransformer'> take 1.0804301053285599 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextModel'> take 1.0804733354598284 secs for forwarding
-Stage1: 3.3527612686157227e-06; self.training: False output_hidden_states: False
-output_attentions: False
-Stage2.1: 0.0010791793465614319
-Stage2.1: 0.0005592126399278641
-Stage2.1: 0.0005662683397531509
-Stage2.1: 0.0005668271332979202
-Stage2.1: 0.0005307868123054504
-Stage2.1: 0.0005180761218070984
-Stage2.1: 0.0005161911249160767
-Stage2.1: 0.0005336515605449677
-Stage2.1: 0.0005166791379451752
-Stage2.1: 0.0005152150988578796
-Stage2.1: 0.0005000587552785873
-Stage2.1: 0.0005010385066270828
-Stage2.1: 0.0004981756210327148
-Stage2.1: 0.0004995688796043396
-Stage2.1: 0.0005175899714231491
-Stage2.1: 0.0005015265196561813
-Stage2.1: 0.0004991497844457626
-Stage2.1: 0.0005005467683076859
-Stage2.1: 0.0005009658634662628
-Stage2.1: 0.0005100462585687637
-Stage2.1: 0.0005094874650239944
-Stage2.1: 0.0005052965134382248
-Stage2.1: 0.0005417540669441223
-Stage2.1: 0.0005175191909074783
-Stage2: 0.013357516378164291
-Stage3: 1.8849968910217285e-06
-All Stage: 0.013434063643217087
-Encoder Called Repeatedly!
-2.6580889225006104
-<class 'torch.nn.modules.sparse.Embedding'> take 9.742937982082367e-05 secs for forwarding
-<class 'torch.nn.modules.sparse.Embedding'> take 2.3117288947105408e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextEmbeddings'> take 0.0002672802656888962 secs for forwarding
-Stage1: 2.3730099201202393e-06; self.training: False output_hidden_states: False
-output_attentions: False
-<class 'torch.nn.modules.normalization.LayerNorm'> take 5.866587162017822e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 0.00012249872088432312 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.310292959213257e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.121793270111084e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0006651598960161209 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6540830731391907e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 4.3507665395736694e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 5.580298602581024e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 4.0648505091667175e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00019736774265766144 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0010483749210834503 secs for forwarding
-Stage2.1: 0.001070655882358551
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.786889672279358e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.2199546694755554e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7867034077644348e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7447938919067383e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003941096365451813 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003997683525085449 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5561079382896423e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.2123178243637085e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.16245311498642e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.694556653499603e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001651030033826828 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007162857800722122 secs for forwarding
 <class 'torch.nn.modules.normalization.LayerNorm'> take 2.598017454147339e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1147152185440063e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.022940993309021e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.408081829547882e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016230903565883636 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007077660411596298 secs for forwarding
-Stage2.1: 0.0007248055189847946
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7446076273918152e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.31047922372818e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.835504710674286e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7516856789588928e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.07280570268631e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039264559745788574 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5492161512374878e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.121607005596161e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.0646642446517944e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.603845834732056e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00015804916620254517 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007006432861089706 secs for forwarding
-Stage2.1: 0.0007206164300441742
+<class 'torch.nn.modules.linear.Linear'> take 4.4908374547958374e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9262155294418335e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.219768404960632e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00042246654629707336 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7447938919067383e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.408268094062805e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.1136518120765686e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6386772990226746e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016894377768039703 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007446408271789551 secs for forwarding
 <class 'torch.nn.modules.normalization.LayerNorm'> take 2.7865171432495117e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.2125040888786316e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8425827622413635e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.6959925889968872e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1288713216781616e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039131753146648407 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6049092411994934e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.022754728794098e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.547966480255127e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016028434038162231 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007035750895738602 secs for forwarding
-Stage2.1: 0.0007234793156385422
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.611987292766571e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8284266591072083e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7447938919067383e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1147152185440063e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.000392155721783638 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6889145374298096e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.973767161369324e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001632198691368103 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007072761654853821 secs for forwarding
-Stage2.1: 0.0007257834076881409
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7026981115341187e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1638890504837036e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8353184461593628e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 4.071928560733795e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1637027859687805e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004068240523338318 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.598017454147339e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170967102050781e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.9249658584594727e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.547966480255127e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00015658140182495117 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007110480219125748 secs for forwarding
-Stage2.1: 0.0007285773754119873
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6959925889968872e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.121793270111084e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.933293581008911e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 2.8913840651512146e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8286129236221313e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.072991967201233e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003874748945236206 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5561079382896423e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.0298327803611755e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.499165177345276e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001593753695487976 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0006893984973430634 secs for forwarding
-Stage2.1: 0.0007077641785144806
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.598017454147339e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219768404960632e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.647005021572113e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7935951948165894e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00038656778633594513 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.4165958166122437e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.01567667722702e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.5546720027923584e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016077235341072083 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0006949864327907562 secs for forwarding
-Stage2.1: 0.0007148906588554382
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5073066353797913e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.498978912830353e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8774142265319824e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.7867034077644348e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.024190664291382e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003912486135959625 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6049092411994934e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.2125040888786316e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.93204391002655e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.498978912830353e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016126222908496857 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.000702178105711937 secs for forwarding
-Stage2.1: 0.0007190778851509094
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.6959925889968872e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.2125040888786316e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.835504710674286e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8425827622413635e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.1288713216781616e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00038887374103069305 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5564804673194885e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170967102050781e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 4.1134655475616455e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.49879264831543e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016077235341072083 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0006987564265727997 secs for forwarding
-Stage2.1: 0.0007176846265792847
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7026981115341187e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.170780837535858e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.6891008019447327e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8423964977264404e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.0798837542533875e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00038566067814826965 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.4585053324699402e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004016552120447159 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.695806324481964e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.3663585782051086e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.1136518120765686e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.54815274477005e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016698800027370453 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007243845611810684 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7867034077644348e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261677920818329e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.835690975189209e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.121979534626007e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00039934925734996796 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7867034077644348e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.1638890504837036e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.01567667722702e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.680586814880371e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016461312770843506 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007162857800722122 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7379021048545837e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 5.4895877838134766e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.596767783164978e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001783706247806549 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007105600088834763 secs for forwarding
-Stage2.1: 0.0007281564176082611
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7447938919067383e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.212690353393555e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8425827622413635e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 2.8423964977264404e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.07280570268631e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0003918055444955826 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 2.598017454147339e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.88449227809906e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.8776004910469055e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.121793270111084e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.00040263310074806213 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.5562942028045654e-05 secs for forwarding
 <class 'torch.nn.modules.linear.Linear'> take 3.219582140445709e-05 secs for forwarding
-<class 'transformers.activations.QuickGELUActivation'> take 3.973953425884247e-05 secs for forwarding
-<class 'torch.nn.modules.linear.Linear'> take 3.5898759961128235e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00015895813703536987 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0006997343152761459 secs for forwarding
-Stage2.1: 0.0007224325090646744
-Stage2: 0.009106945246458054
-Stage3: 1.3951212167739868e-06
-All Stage: 0.009159954264760017
-Encoder Called Repeatedly!
-<class 'transformers.models.clip.modeling_clip.CLIPEncoder'> take 0.009224766865372658 secs for forwarding
-<class 'torch.nn.modules.normalization.LayerNorm'> take 3.065913915634155e-05 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextTransformer'> take 0.009960049763321877 secs for forwarding
-<class 'transformers.models.clip.modeling_clip.CLIPTextModel'> take 0.009991267696022987 secs for forwarding
-Stage1: 1.955777406692505e-06; self.training: False output_hidden_states: False
-output_attentions: False
-Stage2.1: 0.0008501727133989334
-Stage2.1: 0.0005559325218200684
-Stage2.1: 0.0005535576492547989
-Stage2.1: 0.0005564223974943161
-Stage2.1: 0.0005516018718481064
-Stage2.1: 0.0005483198910951614
-Stage2.1: 0.0005682241171598434
-Stage2.1: 0.0005492977797985077
-Stage2.1: 0.0005435701459646225
-Stage2.1: 0.0005057882517576218
-Stage2.1: 0.0005058553069829941
-Stage2.1: 0.0005024317651987076
-Stage2.1: 0.0005014557391405106
-Stage2.1: 0.0004985947161912918
-Stage2.1: 0.0005408488214015961
-Stage2.1: 0.0005019437521696091
-Stage2.1: 0.0005337242037057877
-Stage2.1: 0.0005014557391405106
-Stage2.1: 0.0005029924213886261
-Stage2.1: 0.0004985928535461426
-Stage2.1: 0.0004978235810995102
-Stage2.1: 0.0005209427326917648
-Stage2.1: 0.0005043167620897293
-Stage2.1: 0.0005019456148147583
-Stage2: 0.013267075642943382
-Stage3: 1.953914761543274e-06
-All Stage: 0.013341803103685379
-Encoder Called Repeatedly!
-0.4484422206878662
+<class 'transformers.activations.QuickGELUActivation'> take 4.1136518120765686e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.645569086074829e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.0001656617969274521 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007215254008769989 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.8915703296661377e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.359280526638031e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.9824674129486084e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 2.884306013584137e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.0308961868286133e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPAttention'> take 0.0004001874476671219 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.7449801564216614e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.261305391788483e-05 secs for forwarding
+<class 'transformers.activations.QuickGELUActivation'> take 4.1136518120765686e-05 secs for forwarding
+<class 'torch.nn.modules.linear.Linear'> take 3.6874786019325256e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPMLP'> take 0.00016656704246997833 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoderLayer'> take 0.0007229205220937729 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPEncoder'> take 0.010154413059353828 secs for forwarding
+<class 'torch.nn.modules.normalization.LayerNorm'> take 2.98917293548584e-05 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextTransformer'> take 0.010939773172140121 secs for forwarding
+<class 'transformers.models.clip.modeling_clip.CLIPTextModel'> take 0.01097148098051548 secs for forwarding
+0.5467710494995117

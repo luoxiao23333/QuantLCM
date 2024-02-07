@@ -569,7 +569,7 @@ def time_forward(
         print(f"{self.__class__} take {time.perf_counter()-_time_forward_start_time} secs for forwarding")
         return ans
 
-clip.CLIPEncoder
+
 import types
 def replace_with_time_forward(model: torch.nn.Module, first=True):
     if first:
