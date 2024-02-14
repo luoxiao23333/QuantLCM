@@ -40,12 +40,13 @@ input: NHWC
 
 @torch.no_grad
 def test_conv(test, data_scale, verbose):
-    in_channels = 1280
-    out_channels = 1280
+    in_channels = 320
+    out_channels = 320
     kernel_size = (1,1)
     run_time = 10
 
     if test == "torch":
+        
         conv = torch.nn.Conv2d(in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size,
                                stride=(1,1), padding=(1,1), dilation=(1,1), bias=True).cuda()
         x = torch.ones((2,in_channels, data_scale, data_scale), dtype=torch.float32)

@@ -1,6 +1,6 @@
 from diffusers.models import unet_2d_condition as unet
 from diffusers.models import embeddings
-from diffusers.models.lora import LoRACompatibleLinear
+from diffusers.models.lora import LoRACompatibleLinear, LoRACompatibleConv
 from diffusers.utils import USE_PEFT_BACKEND
 from diffusers.models.activations import get_activation
 import torch
@@ -8,11 +8,23 @@ import torch.nn as nn
 from typing import Optional, Union, Tuple, Dict
 
 from torch_int.nn.linear import W8A8BFP32OFP32Linear, W8A8B8O8Linear, W8A8B8O8LinearReLU
+from torch_int.nn.conv import TestW8A8B8O8Conv2D16
 from torch_int.nn.fused import LayerNormQ
 from torch_int.nn.bmm import BMM_S8T_S8N_S8T, BMM_S8T_S8N_F32T
 
 
 
+def replace_unet_conv(model):
+    for name, module in model.named_children():
+        # 如果子模块是要替换的类型
+        if isinstance(module, LoRACompatibleConv):
+            # 创建一个新的替换模块，假设构造函数参数相同
+            # 注意：这里你可能需要根据实际情况调整参数
+            new_module = TestW8A8B8O8Conv2D16.from_float(module, 1., 1.)
+            setattr(model, name, new_module)
+        else:
+            # 否则，递归遍历当前模块的子模块
+            replace_unet_conv(module)
 
 class INT8TimeStepEmbedding(torch.nn.Module):
     def __init__(

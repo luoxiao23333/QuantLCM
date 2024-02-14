@@ -26,6 +26,8 @@ from copy import deepcopy
 from concurrent.futures import ThreadPoolExecutor
 import uuid
 
+from quant.utils import LatencyLogger
+
 DESCRIPTION = '''# Latent Consistency Model
 Distilled from [Dreamshaper v7](https://huggingface.co/Lykon/dreamshaper-7) fine-tune of [Stable Diffusion v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5) with only 4,000 training iterations (~32 A100 GPU Hours). [Project page](https://latent-consistency-models.github.io)
 '''
@@ -66,11 +68,21 @@ pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7")
 # pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", custom_pipeline="latent_consistency_txt2img", custom_revision="main")
 pipe.to(torch_device=device, torch_dtype=DTYPE)
 
+TEST_TARGET = "iunet"
+latency_file = {
+    "otext": "module_latency/otext.txt",
+    "itext": "module_latency/itext.txt",
+    "ounet": "module_latency/ounet.txt",
+    "iunet": "module_latency/iunet.txt"
+}
+
 def replace_text_encoder(pipe, replace=True):
     from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
     from model_analyze import write_model_arch
-    from quant.text_encoder import INT8CLIPTextModel, replace_with_time_forward
+    from quant.text_encoder import INT8CLIPTextModel
+    from quant.utils import replace_with_time_forward
     from quant.utils import copy_and_report_attributes
+    from quant.unet import replace_unet_conv
     text_encoder = deepcopy(pipe.components['text_encoder'])
     '''
     attn_input_scale: float,
@@ -93,12 +105,17 @@ def replace_text_encoder(pipe, replace=True):
             "fc2_input_scale": 1,
         } for _ in range(12)])
         int8_text_encoder.eval()
-        replace_with_time_forward(int8_text_encoder)
+        #replace_with_time_forward(int8_text_encoder)
         components['text_encoder'] = int8_text_encoder
     else:
-        replace_with_time_forward(text_encoder)
+        #replace_with_time_forward(text_encoder)
         text_encoder.eval()
         components['text_encoder'] = text_encoder
+
+    unet = components["unet"]
+    replace_unet_conv(unet)
+    unet.eval()
+    components["unet"] = unet
 
     pipe = LatentConsistencyModelPipeline(**components, requires_safety_checker=False)
     # print(f"int8: {model_memory_usage(int8_text_encoder)} Bytes")
@@ -109,8 +126,46 @@ def replace_text_encoder(pipe, replace=True):
     # exit(0)
     return pipe
 
+def replace_unet(pipe, replace=True):
+    from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
+    from model_analyze import write_model_arch
+    from quant.text_encoder import INT8CLIPTextModel
+    from quant.utils import replace_with_time_forward
+    from quant.utils import copy_and_report_attributes
+    from quant.unet import replace_unet_conv
+    components = getattr(pipe, 'components')
+    unet = deepcopy(components['unet'])
+    if replace:
+        replace_unet_conv(unet)
+        unet.eval()
+        replace_with_time_forward(unet)
+        components['unet'] = unet
+    else:
+        replace_with_time_forward(unet)
+        unet.eval()
+        components['unet'] = unet
 
-pipe = replace_text_encoder(pipe, True)
+    pipe = LatentConsistencyModelPipeline(**components, requires_safety_checker=False)
+    # print(f"int8: {model_memory_usage(int8_text_encoder)} Bytes")
+    if replace:
+        print(f"i8: {model_memory_usage(unet)} Bytes")
+    else:
+        print(f"f32: {model_memory_usage(unet)} Bytes")
+    from model_analyze import print_tensor_dtypes
+    # print_tensor_dtypes(int8_text_encoder)
+    # copy_and_report_attributes(text_encoder, int8_text_encoder)
+    # exit(0)
+    return pipe
+
+# pipe = replace_text_encoder(pipe, True)
+if TEST_TARGET == "otext":
+    pipe = replace_text_encoder(pipe, False)
+if TEST_TARGET == "itext":
+    pipe = replace_text_encoder(pipe, True)
+if TEST_TARGET == "ounet":
+    pipe = replace_unet(pipe, False)
+if TEST_TARGET == "iunet":
+    pipe = replace_unet(pipe, True)
 
 def randomize_seed_fn(seed: int, randomize_seed: bool) -> int:
     if randomize_seed:
@@ -148,6 +203,7 @@ def generate(
     seed = randomize_seed_fn(seed, randomize_seed)
     torch.manual_seed(seed)
     pipe.to(torch_device=device)
+    # prompt = "a"*1000
     start_time = time.time()
     result = pipe(
         prompt=prompt,
@@ -159,7 +215,15 @@ def generate(
         lcm_origin_steps=50,
         output_type="pil",
     ).images
+    torch.cuda.synchronize()
     print(time.time() - start_time)
+    LatencyLogger.write(latency_file[TEST_TARGET])
+    file = open("conv_shape.txt", "w")
+    from torch_int.nn.conv import TestW8A8B8O8Conv2D16
+    for info in TestW8A8B8O8Conv2D16._info:
+        file.write(info+"\n")
+    TestW8A8B8O8Conv2D16._info.clear()
+    file.close()
     paths = save_images(result, profile, metadata={"prompt": prompt, "seed": seed, "width": width, "height": height, "guidance_scale": guidance_scale, "num_inference_steps": num_inference_steps})
     return paths, seed
 

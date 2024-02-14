@@ -1,0 +1,768 @@
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 3, 3, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 1, 1, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 3, 3, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 1, 1, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 3, 3, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 1, 1, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 3, 3, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 1, 1, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 3, 3, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 1, 1, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 3, 3, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 1, 1, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 3, 3, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 1, 1, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 3, 3, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 1, 1, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 3, 3, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 1, 1, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 3, 3, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 1, 1, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 3, 3, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 1, 1, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 3, 3, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 1, 1, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 3, 3, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 1, 1, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 3, 3, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 1, 1, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 3, 3, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 1, 1, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 3, 3, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 1, 1, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 3, 3, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 1, 1, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 3, 3, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 1, 1, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 3, 3, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 1, 1, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 3, 3, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 1, 1, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 3, 3, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 1, 1, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 3, 3, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:320, oC:640, input: torch.Size([2, 320, 32, 32]), filter: torch.Size([640, 1, 1, 320])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 3, 3, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:640, oC:1280, input: torch.Size([2, 640, 16, 16]), filter: torch.Size([1280, 1, 1, 640])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 8, 8]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 8, 8]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 3, 3, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:2560, oC:1280, input: torch.Size([2, 2560, 16, 16]), filter: torch.Size([1280, 1, 1, 2560])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 3, 3, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:1280, input: torch.Size([2, 1920, 16, 16]), filter: torch.Size([1280, 1, 1, 1920])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 16, 16]), filter: torch.Size([1280, 1, 1, 1280])
+
+iC:1280, oC:1280, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([1280, 3, 3, 1280])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 3, 3, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1920, oC:640, input: torch.Size([2, 1920, 32, 32]), filter: torch.Size([640, 1, 1, 1920])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 3, 3, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:1280, oC:640, input: torch.Size([2, 1280, 32, 32]), filter: torch.Size([640, 1, 1, 1280])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 3, 3, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:640, input: torch.Size([2, 960, 32, 32]), filter: torch.Size([640, 1, 1, 960])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 32, 32]), filter: torch.Size([640, 1, 1, 640])
+
+iC:640, oC:640, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([640, 3, 3, 640])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 3, 3, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:960, oC:320, input: torch.Size([2, 960, 64, 64]), filter: torch.Size([320, 1, 1, 960])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 3, 3, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 3, 3, 320])
+
+iC:640, oC:320, input: torch.Size([2, 640, 64, 64]), filter: torch.Size([320, 1, 1, 640])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
+iC:320, oC:320, input: torch.Size([2, 320, 64, 64]), filter: torch.Size([320, 1, 1, 320])
+
