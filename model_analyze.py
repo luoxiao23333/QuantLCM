@@ -4,6 +4,7 @@ import inspect
 # from submodules.torch_int.torch_int.nn.linear import W8A8B8O8Linear
 import torch_int
 from quant.utils import LatencyLogger
+from diffusers.models.lora import LoRACompatibleConv
 
 def analyze(model):
     f = open("text_encoder.txt", 'w')
@@ -57,3 +58,31 @@ def print_modules_with_lora_layer(model):
         # 如果子模块还包含其他子模块，递归遍历它们
         if isinstance(module, torch.nn.Module):
             print_modules_with_lora_layer(module)
+
+
+'''
+For unet:
+{"{'stride': (1, 1), 'padding': (1, 1), 'dilation': (1, 1), 'groups': 1, 'hasBias': True}", 
+"{'stride': (1, 1), 'padding': (0, 0), 'dilation': (1, 1), 'groups': 1, 'hasBias': True}", 
+"{'stride': (2, 2), 'padding': (1, 1), 'dilation': (1, 1), 'groups': 1, 'hasBias': True}"}
+'''
+def print_conv_settings(model):
+    info_set = set()
+    def __print_conv_settings(model):
+        for name, module in model.named_children():
+            if isinstance(module, LoRACompatibleConv):
+                info_set.add(
+                    repr({
+                        "stride": module.stride,
+                        "padding": module.padding,
+                        "dilation": module.dilation,
+                        "groups": module.groups,
+                        "hasBias": module.bias is not None,
+                    })
+                )
+
+            if isinstance(module, torch.nn.Module):
+                __print_conv_settings(module)
+
+    __print_conv_settings(model)
+    return info_set

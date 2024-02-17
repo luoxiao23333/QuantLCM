@@ -70,11 +70,36 @@ pipe.to(torch_device=device, torch_dtype=DTYPE)
 
 TEST_TARGET = "iunet"
 latency_file = {
+    "vae": "module_latency/ovae.txt",
     "otext": "module_latency/otext.txt",
     "itext": "module_latency/itext.txt",
     "ounet": "module_latency/ounet.txt",
     "iunet": "module_latency/iunet.txt"
 }
+
+def replace_vae(pipe, replace=True):
+    from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
+    from model_analyze import write_model_arch
+    from quant.text_encoder import INT8CLIPTextModel
+    from quant.utils import replace_with_time_forward
+    from quant.utils import copy_and_report_attributes
+    from quant.unet import replace_unet_conv
+    vae = deepcopy(pipe.components['vae'])
+    components = getattr(pipe, 'components')
+
+    #replace_with_time_forward(text_encoder)
+    vae.eval()
+    replace_with_time_forward(vae)
+    components["vae"] = vae
+
+    pipe = LatentConsistencyModelPipeline(**components, requires_safety_checker=False)
+    # print(f"int8: {model_memory_usage(int8_text_encoder)} Bytes")
+    print(f"f32: {model_memory_usage(vae)} Bytes")
+    from model_analyze import print_tensor_dtypes
+    # print_tensor_dtypes(int8_text_encoder)
+    # copy_and_report_attributes(text_encoder, int8_text_encoder)
+    # exit(0)
+    return pipe
 
 def replace_text_encoder(pipe, replace=True):
     from model_analyze import analyze, model_memory_usage, print_tensor_dtypes
@@ -158,6 +183,8 @@ def replace_unet(pipe, replace=True):
     return pipe
 
 # pipe = replace_text_encoder(pipe, True)
+if TEST_TARGET == "vae":
+    pipe = replace_vae(pipe, False)
 if TEST_TARGET == "otext":
     pipe = replace_text_encoder(pipe, False)
 if TEST_TARGET == "itext":
@@ -218,12 +245,6 @@ def generate(
     torch.cuda.synchronize()
     print(time.time() - start_time)
     LatencyLogger.write(latency_file[TEST_TARGET])
-    file = open("conv_shape.txt", "w")
-    from torch_int.nn.conv import TestW8A8B8O8Conv2D16
-    for info in TestW8A8B8O8Conv2D16._info:
-        file.write(info+"\n")
-    TestW8A8B8O8Conv2D16._info.clear()
-    file.close()
     paths = save_images(result, profile, metadata={"prompt": prompt, "seed": seed, "width": width, "height": height, "guidance_scale": guidance_scale, "num_inference_steps": num_inference_steps})
     return paths, seed
 
