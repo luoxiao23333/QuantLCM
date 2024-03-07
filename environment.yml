@@ -11,7 +11,7 @@ dependencies:
   - backcall=0.2.0=pyh9f0ad1d_0
   - binutils_impl_linux-64=2.35.1=h27ae35d_9
   - binutils_linux-64=2.35.1=h454624a_30
-  - ca-certificates=2023.08.22=h06a4308_0
+  - ca-certificates=2023.12.12=h06a4308_0
   - comm=0.2.1=pyhd8ed1ab_0
   - debugpy=1.6.7=py38h6a678d5_0
   - decorator=5.1.1=pyhd8ed1ab_0
@@ -21,7 +21,7 @@ dependencies:
   - gcc_linux-64=9.3.0=h1ee779e_30
   - gxx_impl_linux-64=9.3.0=hbdd7822_17
   - gxx_linux-64=9.3.0=h7e70986_30
-  - ipykernel=6.29.0=pyhd33586a_0
+  - ipykernel=6.28.0=py38h06a4308_0
   - ipython=8.12.0=pyh41d4057_0
   - jedi=0.19.1=pyhd8ed1ab_0
   - jupyter_client=7.3.4=pyhd8ed1ab_0
@@ -38,7 +38,7 @@ dependencies:
   - matplotlib-inline=0.1.6=pyhd8ed1ab_0
   - ncurses=6.4=h6a678d5_0
   - nest-asyncio=1.6.0=pyhd8ed1ab_0
-  - openssl=3.0.12=h7f8727e_0
+  - openssl=3.0.13=h7f8727e_0
   - packaging=23.2=pyhd8ed1ab_0
   - parso=0.8.3=pyhd8ed1ab_0
   - pexpect=4.9.0=pyhd8ed1ab_0
