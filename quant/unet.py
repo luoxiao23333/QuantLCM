@@ -77,3 +77,5 @@ class INT8TimeStepEmbedding(torch.nn.Module):
         int8model.fc1 = W8A8B8O8LinearReLU.from_float(model.fc1, fc1_input_scale, fc2_input_scale)
         int8model.fc2 = W8A8BFP32OFP32Linear.from_float(model.fc2, fc2_input_scale)
         return int8model
+    
+

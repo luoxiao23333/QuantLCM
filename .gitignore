@@ -3,3 +3,5 @@
 images
 submodules
 weights
+model_weights
+tvm_lib

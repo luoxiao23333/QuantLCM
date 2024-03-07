@@ -130,4 +130,5 @@ def test_linear(test, data_scale, verbose):
 
 
 
-test_linear(test, data_scale=64, verbose=False)
+test_linear(test, data_scale=768, verbose=False)
+

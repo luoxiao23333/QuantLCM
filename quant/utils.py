@@ -25,38 +25,89 @@ def copy_and_report_attributes(obj1, obj2):
         print(attr)
 
 
+# class LatencyLogger:
+#     stat = []
+#     __first_open = True
+#     __counter_dict = {}
+#     __file_dict = {}
+
+#     @staticmethod
+#     def put(info):
+#         LatencyLogger.stat.append(info)
+
+#     @staticmethod
+#     def write(filename, clear=True):
+#         if filename not in LatencyLogger.__file_dict:
+#             file = open(filename, "w")
+#             LatencyLogger.__file_dict[filename] = file
+#             LatencyLogger.__counter_dict[filename] = 1
+#         else:
+#             file = LatencyLogger.__file_dict[filename]
+#         file.write("-"*20+"\n")
+#         file.write(f"No. {LatencyLogger.__counter_dict[filename]}\n")
+#         LatencyLogger.__counter_dict[filename] += 1
+#         for info in LatencyLogger.stat:
+#             file.write(info+"\n")
+#         if clear:
+#             LatencyLogger.stat = []
+
+
 class LatencyLogger:
-    stat = []
+    stat = {}
     __first_open = True
     __counter_dict = {}
     __file_dict = {}
 
     @staticmethod
-    def put(info):
-        LatencyLogger.stat.append(info)
-
-    @staticmethod
-    def write(filename, clear=True):
-        if filename not in LatencyLogger.__file_dict:
+    def put(filename, info):
+        if filename not in LatencyLogger.stat:
+            LatencyLogger.stat[filename] = []
             file = open(filename, "w")
             LatencyLogger.__file_dict[filename] = file
             LatencyLogger.__counter_dict[filename] = 1
-        else:
-            file = LatencyLogger.__file_dict[filename]
+        LatencyLogger.stat[filename].append(info)
+
+    @staticmethod
+    def write(filename, clear=True):
+        assert filename in LatencyLogger.__file_dict
+
+        file = LatencyLogger.__file_dict[filename]
         file.write("-"*20+"\n")
         file.write(f"No. {LatencyLogger.__counter_dict[filename]}\n")
         LatencyLogger.__counter_dict[filename] += 1
-        for info in LatencyLogger.stat:
+        for info in LatencyLogger.stat[filename]:
             file.write(info+"\n")
         if clear:
-            LatencyLogger.stat = []
+            LatencyLogger.stat[filename] = []
+
+    @staticmethod
+    def write_all(clear=True):
+        for filename in LatencyLogger.__file_dict.keys():
+            LatencyLogger.write(filename)
+
+
+def recursive_replace(model, time_forward):
+    for name, child in model.named_children():
+        if hasattr(child, 'forward'):
+            
+            child.original_forward = types.MethodType(type(child).forward, child)
+            child.forward = types.MethodType(time_forward, child)
+
+        if isinstance(child, torch.nn.Module):
+            recursive_replace(child, time_forward)
 
 
 import time
-def time_forward(
+
+import types
+def replace_with_time_forward(model: torch.nn.Module, filename):
+
+    def time_forward(
         self,
         *args,
         **kwargs):
+
+        torch.cuda.synchronize()
         _time_forward_start_time = time.perf_counter()
 
         ans = self.original_forward(
@@ -65,21 +116,13 @@ def time_forward(
         torch.cuda.synchronize()
 
         # print(f"{self.__class__} take {time.perf_counter()-_time_forward_start_time} secs for forwarding")
-        LatencyLogger.put(f"{self.__class__} take {1000*(time.perf_counter()-_time_forward_start_time)} ms for forwarding")
+        LatencyLogger.put(filename, f"{self.__class__} take {1000*(time.perf_counter()-_time_forward_start_time)} ms for forwarding")
         return ans
 
+    model.original_forward = types.MethodType(type(model).forward, model)
+    model.forward = types.MethodType(time_forward, model)
 
-import types
-def replace_with_time_forward(model: torch.nn.Module, first=True):
-    if first:
-        model.original_forward = types.MethodType(type(model).forward, model)
-        model.forward = types.MethodType(time_forward, model)
+    recursive_replace(model, time_forward)
 
-    for name, child in model.named_children():
-        if hasattr(child, 'forward'):
-            
-            child.original_forward = types.MethodType(type(child).forward, child)
-            child.forward = types.MethodType(time_forward, child)
 
-        if isinstance(child, torch.nn.Module):
-            replace_with_time_forward(child, False)
+

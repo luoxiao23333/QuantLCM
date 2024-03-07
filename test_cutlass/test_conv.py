@@ -13,35 +13,35 @@ torch::Tensor conv2D(torch::Tensor input,  // INT8
 
 '''
 For H*W: 8*8
-torch needs 0.05554426461458206 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
-cutlass needs 0.01187305897474289 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
-torch_int needs 0.01787915825843811 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
-torch_int_test needs 0.02370402216911316 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
+torch needs 0.05517549579963088 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
+cutlass needs 0.013410800602287054 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
+torch_int needs 0.019176898058503866 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
+torch_int_test needs 0.02696769661270082 ms, with result shape torch.Size([2, 320, 10, 10]), with input shape torch.Size([2, 320, 8, 8])
 For H*W: 16*16
-torch needs 0.054454803466796875 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
-cutlass needs 0.01206863671541214 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
-torch_int needs 0.01778826117515564 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
-torch_int_test needs 0.027112290263175964 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
+torch needs 0.05330159910954535 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
+cutlass needs 0.013462902279570699 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
+torch_int needs 0.019402900943532586 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
+torch_int_test needs 0.02694280119612813 ms, with result shape torch.Size([2, 320, 18, 18]), with input shape torch.Size([2, 320, 16, 16])
 For H*W: 32*32
-torch needs 0.06997324526309967 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
-cutlass needs 0.013723596930503845 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
-torch_int needs 0.01816563308238983 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
-torch_int_test needs 0.0242697075009346 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
+torch needs 0.06155450246296823 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
+cutlass needs 0.013702799333259463 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
+torch_int needs 0.019299902487546206 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
+torch_int_test needs 0.027131795650348067 ms, with result shape torch.Size([2, 320, 34, 34]), with input shape torch.Size([2, 320, 32, 32])
 For H*W: 64*64
-torch needs 0.2784827724099159 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
-cutlass needs 0.011872686445713043 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
-torch_int needs 0.04059839993715286 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
-torch_int_test needs 0.03406815230846405 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
+torch needs 0.17206440097652376 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
+cutlass needs 0.013461901107802987 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
+torch_int needs 0.02982469741255045 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
+torch_int_test needs 0.03043769975192845 ms, with result shape torch.Size([2, 320, 66, 66]), with input shape torch.Size([2, 320, 64, 64])
 For H*W: 160*160
-torch needs 1.5172263607382774 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
-cutlass needs 0.011635199189186096 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
-torch_int needs 0.30288510024547577 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
-torch_int_test needs 0.2984853461384773 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
+torch needs 0.8025928982533514 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
+cutlass needs 0.01329589867964387 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
+torch_int needs 0.16861649928614497 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
+torch_int_test needs 0.1693805039394647 ms, with result shape torch.Size([2, 320, 162, 162]), with input shape torch.Size([2, 320, 160, 160])
 For H*W: 240*240
-torch needs 3.2652487978339195 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
-cutlass needs 0.012731924653053284 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
-torch_int needs 0.6390843540430069 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
-torch_int_test needs 0.633692741394043 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
+torch needs 1.702600804856047 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
+cutlass needs 0.013005902292206883 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
+torch_int needs 0.34361889702267945 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
+torch_int_test needs 0.34216089989058673 ms, with result shape torch.Size([2, 320, 242, 242]), with input shape torch.Size([2, 320, 240, 240])
 '''
 
 import torch
@@ -69,6 +69,7 @@ def test_conv(test, data_scale, verbose):
         x = x.cuda()
         for i in range(run_time):
             result = conv(x)
+        torch.cuda.synchronize()
         start_time = time.perf_counter()
         for _ in range(run_time):
             result = conv(x)
@@ -87,6 +88,7 @@ def test_conv(test, data_scale, verbose):
         x = x.cuda()
         for i in range(run_time):
             result = conv(x)
+        torch.cuda.synchronize()
         start_time = time.perf_counter()
         for _ in range(run_time):
             result = conv(x)
@@ -105,6 +107,7 @@ def test_conv(test, data_scale, verbose):
         x = x.cuda()
         for i in range(run_time):
             result = conv(x)
+        torch.cuda.synchronize()
         start_time = time.perf_counter()
         for _ in range(run_time):
             result = conv(x)
@@ -123,6 +126,7 @@ def test_conv(test, data_scale, verbose):
         options = 0
         for i in range(10):
             result = conv2D16(x, filter, bias, options, 1, 1)
+        torch.cuda.synchronize()
         start_time = time.perf_counter()
         for _ in range(10):
             result = conv2D16(x, filter, bias, options, 1, 1)
