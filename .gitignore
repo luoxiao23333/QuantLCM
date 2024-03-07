@@ -7,3 +7,4 @@ model_weights
 tvm_lib
 weight
 trace
+tvm_trace
