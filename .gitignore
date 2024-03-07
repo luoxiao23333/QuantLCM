@@ -6,5 +6,5 @@ weights
 model_weights
 tvm_lib
 weight
-trace
-tvm_trace
+trace/
+tvm_trace/
