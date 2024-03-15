@@ -12,6 +12,7 @@ import datetime
 from copy import deepcopy
 from diffusers.pipelines.latent_consistency_models.pipeline_latent_consistency_text2img import LatentConsistencyModelPipeline
 from quant.utils import LatencyLogger
+from quant.transformer_blocks import INTUNet2DConditionModel
 
 
 def get_trace_handler(test):
@@ -43,7 +44,7 @@ class Predictor:
         #     cache_dir="model_cache",
         #     local_files_only=True,
         # )
-        self.pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", local_files_only=True)
+        self.pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", local_files_only=False, cache_dir="./weights")
         self.pipe.to(torch_device="cuda", torch_dtype=torch.float16)
 
         self.record_path = {
@@ -88,13 +89,14 @@ class Predictor:
         torch.cuda.synchronize()
         print(f"Inference Time: {(time.perf_counter()-start_time)*1000} ms")
 
-        output_paths = []
-        result_dir = f"./sample/{datetime.datetime.now()}"
-        os.makedirs(result_dir)
-        for i, sample in enumerate(result):
-            output_path = f"{result_dir}/out-{i}.png"
-            sample.save(output_path)
-            output_paths.append(output_path)
+        if args.save_image:
+            output_paths = []
+            result_dir = f"./sample/{datetime.datetime.now()}"
+            os.makedirs(result_dir)
+            for i, sample in enumerate(result):
+                output_path = f"{result_dir}/out-{i}.png"
+                sample.save(output_path)
+                output_paths.append(output_path)
         
         if args.record_unet or args.record_text:
             LatencyLogger.write_all()
@@ -176,11 +178,10 @@ class Predictor:
     
     def quant_unet(self, forward_timed):
         from quant.utils import replace_with_time_forward
-        from quant.unet import replace_unet_conv
         components = getattr(self.pipe, 'components')
         unet = deepcopy(components['unet'])
 
-        replace_unet_conv(unet)
+        unet = INTUNet2DConditionModel.from_float(unet)
         if forward_timed:
             replace_with_time_forward(unet, self.record_path["iunet"])
         unet.eval()
@@ -224,7 +225,7 @@ def parse_argument():
                     help="quant text encoder")
     parser.add_argument("--record_text", type=bool, default=False,
                     help="record text encoder")
-    parser.add_argument("--quant_unet", type=bool, default=True,
+    parser.add_argument("--quant_unet", type=bool, default=False,
                     help="quant unet")
     parser.add_argument("--record_unet", type=bool, default=False,
                     help="record unet")
@@ -233,6 +234,11 @@ def parse_argument():
     
     parser.add_argument("--profile", type=bool, default=True,
                 help="enable profile")
+    parser.add_argument("--save_image", type=bool, default=False,
+                help="whether to save the result")
+    
+    parser.add_argument("--intensive_infer", type=bool, default=False,
+                help="intensive infer and profile")
 
     return parser.parse_args()
 
@@ -240,6 +246,11 @@ def parse_argument():
 args = parse_argument()
 predictor = Predictor()
 predictor.setup(args)
+
+if args.intensive_infer:
+    while True:
+        predictor.predict(args)
+        time.sleep(0.1)
 
 if args.profile:
     predictor.profile(args)

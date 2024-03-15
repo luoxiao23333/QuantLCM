@@ -70,6 +70,4 @@ dependencies:
   - xz=5.4.5=h5eee18b_0
   - zeromq=4.3.5=h6a678d5_0
   - zlib=1.2.13=h5eee18b_0
-  - pip:
-      - torch-int==0.0.0
-prefix: /data/hyou37/anaconda3/envs/LCM
+prefix: /data/xiao/anaconda3/envs/LCM
