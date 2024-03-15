@@ -8,3 +8,4 @@ tvm_lib
 weight
 trace/
 tvm_trace/
+sample/
