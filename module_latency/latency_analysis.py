@@ -56,6 +56,27 @@ for i_k in i_latencies.keys():
         if k+"Q" in i_k:
             latency_diff[k] = sum(i_latencies[i_k]) - latency_diff[k]
 
-print("data movement", latency_diff)
-print("compute", compute)
-print("amount", amount)
+# print("data movement", latency_diff)
+# print("compute", compute)
+# print("amount", amount)
+i_attn = {}
+o_attn = {}
+for key, value in i_latencies.items():
+    if "Attention" in key:
+        i_attn[key.split(".")[-1]] = sum(i_latencies[key])
+    if "Conv" in key:
+        i_attn[key.split(".")[-1]] = sum(i_latencies[key])
+    if "Linear" in key:
+        i_attn[key.split(".")[-1]] = sum(i_latencies[key])
+
+for key, value in o_latencies.items():
+    if "Attention" in key:
+        o_attn[key.split(".")[-1]] = sum(o_latencies[key])
+    if "Conv" in key:
+        o_attn[key.split(".")[-1]] = sum(o_latencies[key])
+    if "Linear" in key:
+        o_attn[key.split(".")[-1]] = sum(o_latencies[key])
+
+print(i_attn)
+print(o_attn)
+

@@ -101,14 +101,19 @@ class INTFeedForward(nn.Module):
             W8A8B8O8Linear.from_float(cast(Union[nn.Linear, LoRACompatibleLinear], module.net[2]), 1., 1.)
         ])
 
+        return int_ff
+
 
 @maybe_allow_in_graph
 class INTBasicTransformerBlock(BasicTransformerBlock):
     @staticmethod
     def from_float(module: BasicTransformerBlock) -> INTBasicTransformerBlock:
-        module.norm1 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm1), 1.)
-        module.norm2 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm2), 1.)
-        module.norm3 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm3), 1.)
+        if hasattr(module, "norm1"):
+            module.norm1 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm1), 1.)
+        if hasattr(module, "norm2"):
+            module.norm2 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm2), 1.)
+        if hasattr(module, "norm3"):
+            module.norm3 = LayerNormQ.from_float(cast(torch.nn.LayerNorm, module.norm3), 1.)
         module.attn1 = W8A8B8O8Attention.from_float(module.attn1)
         if module.attn2 is not None:
             module.attn2 = W8A8B8O8Attention.from_float(module.attn2)

@@ -1,0 +1,11 @@
+// This is for dtype casting at the begin and end of a unet, for 4 steps inference
+Start Casting is 0.034809112548828125 ms
+End Casting is 0.039577484130859375 ms
+Start Casting is 0.03147125244140625 ms
+End Casting is 0.037670135498046875 ms
+Start Casting is 0.03218650817871094 ms
+End Casting is 0.04076957702636719 ms
+Start Casting is 0.031948089599609375 ms
+End Casting is 0.03647804260253906 ms
+
+Total: 0.2849102020263672 ms

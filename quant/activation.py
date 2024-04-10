@@ -72,12 +72,13 @@ class GEGLUQ(nn.Module):
         if gate.device.type != "mps":
             return F.gelu(gate)
         # mps: gelu is not implemented for float16
-        return F.gelu(gate.to(dtype=torch.float32)).to(dtype=gate.dtype)
+        return F.gelu(gate.to(dtype=torch.float16)).to(dtype=gate.dtype)
 
     def forward(self, hidden_states, scale: float = 1.0):
         args = () if USE_PEFT_BACKEND else (scale,)
         hidden_states = hidden_states.to(dtype=self.proj.weight.dtype)
         hidden_states, gate = self.proj(hidden_states, *args).chunk(2, dim=-1)
+        gate = gate.to(dtype=torch.float16)
         hidden_states = hidden_states * self.gelu(gate)
         hidden_states = hidden_states.to(dtype=torch.int8)
         return hidden_states

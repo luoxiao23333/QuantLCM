@@ -41,7 +41,9 @@ logger = logging.get_logger(__name__)
 class INTTransFormer2DModel(Transformer2DModel):
     @staticmethod
     def from_float(module: Transformer2DModel) -> INTTransFormer2DModel:
-        module.norm = GroupNormQ.from_float(module.norm, 1.)
+        # Group norm is the 1st layer in this module
+        if hasattr(module, "norm"):
+            module.norm = GroupNormQ.from_float(module.norm, 1.)
 
         assert isinstance(module.proj_in, (torch.nn.Conv2d, LoRACompatibleLinear))
 
@@ -57,22 +59,107 @@ class INTTransFormer2DModel(Transformer2DModel):
     
 
 class INTResnetBlock2D(ResnetBlock2D):
+    def forward(self, input_tensor, temb, scale: float = 1.0):
+        hidden_states = input_tensor
+
+        if self.time_embedding_norm == "ada_group" or self.time_embedding_norm == "spatial":
+            hidden_states = self.norm1(hidden_states, temb)
+        else:
+            hidden_states = self.norm1(hidden_states)
+
+        hidden_states = self.nonlinearity(hidden_states)
+        
+        if self.upsample is not None:
+            # upsample_nearest_nhwc fails with large batch sizes. see https://github.com/huggingface/diffusers/issues/984
+            if hidden_states.shape[0] >= 64:
+                input_tensor = input_tensor.contiguous()
+                hidden_states = hidden_states.contiguous()
+            input_tensor = (
+                self.upsample(input_tensor, scale=scale)
+                if isinstance(self.upsample, Upsample2D)
+                else self.upsample(input_tensor)
+            )
+            hidden_states = (
+                self.upsample(hidden_states, scale=scale)
+                if isinstance(self.upsample, Upsample2D)
+                else self.upsample(hidden_states)
+            )
+        elif self.downsample is not None:
+            input_tensor = (
+                self.downsample(input_tensor, scale=scale)
+                if isinstance(self.downsample, Downsample2D)
+                else self.downsample(input_tensor)
+            )
+            hidden_states = (
+                self.downsample(hidden_states, scale=scale)
+                if isinstance(self.downsample, Downsample2D)
+                else self.downsample(hidden_states)
+            )
+
+        hidden_states = self.conv1(hidden_states, scale) if not USE_PEFT_BACKEND else self.conv1(hidden_states)
+
+        if self.time_emb_proj is not None:
+            if not self.skip_time_act:
+                temb = self.nonlinearity(temb)
+            temb = (
+                self.time_emb_proj(temb, scale)[:, :, None, None]
+                if not USE_PEFT_BACKEND
+                else self.time_emb_proj(temb)[:, :, None, None]
+            )
+
+        if temb is not None and self.time_embedding_norm == "default":
+            hidden_states = hidden_states + temb
+
+        if self.time_embedding_norm == "ada_group" or self.time_embedding_norm == "spatial":
+            hidden_states = self.norm2(hidden_states, temb)
+        else:
+            hidden_states = self.norm2(hidden_states)
+
+        if temb is not None and self.time_embedding_norm == "scale_shift":
+            scale, shift = torch.chunk(temb, 2, dim=1)
+            hidden_states = hidden_states * (1 + scale) + shift
+
+        hidden_states = self.nonlinearity(hidden_states)
+
+        hidden_states = self.dropout(hidden_states)
+        hidden_states = self.conv2(hidden_states, scale) if not USE_PEFT_BACKEND else self.conv2(hidden_states)
+
+        if self.conv_shortcut is not None:
+            input_tensor = (
+                self.conv_shortcut(input_tensor, scale) if not USE_PEFT_BACKEND else self.conv_shortcut(input_tensor)
+            )
+
+        # Use Int8 div
+        if self.output_scale_factor != 1.0:
+            output_tensor = (input_tensor + hidden_states) // int(self.output_scale_factor)
+        else:
+            output_tensor = (input_tensor + hidden_states)
+
+        return output_tensor
+
     @staticmethod
     def from_float(module: ResnetBlock2D):
-        module.norm1 = GroupNormQ.from_float(module.norm1, 1.)
+        if hasattr(module, "norm1"):
+            module.norm1 = GroupNormQ.from_float(module.norm1, 1.)
         module.conv1 = W8A8B8O8Conv2D16.from_float(module.conv1, 1., 1.)
         module.time_emb_proj = W8A8B8O8Linear.from_float(module.time_emb_proj, 1., 1.)
-        module.norm2 = GroupNormQ.from_float(module.norm2, 1.)
+        if hasattr(module, "norm2"):
+            module.norm2 = GroupNormQ.from_float(module.norm2, 1.)
         module.conv2 = W8A8B8O8Conv2D16.from_float(module.conv2, 1., 1.)
-        module.nonlinearity = SiLUQ.from_float(module.nonlinearity)
+        if hasattr(module, "nonlinearity"):
+            module.nonlinearity = SiLUQ.from_float(module.nonlinearity)
+
+        assert module.upsample is None
+
         if module.conv_shortcut is not None:
             module.conv_shortcut = W8A8B8O8Conv2D16.from_float(module.conv_shortcut, 1., 1.)
 
-
+        module.__class__ = INTResnetBlock2D
+        module = cast(INTResnetBlock2D,  module)
         return module
 
 
-class INTDownSample2D(torch.nn.Module):
+class INTDownSample2D(Downsample2D):
     def forward(self, hidden_states, scale: float = 1.0):
         assert hidden_states.shape[1] == self.channels
         return self.conv(hidden_states)
@@ -80,9 +167,11 @@ class INTDownSample2D(torch.nn.Module):
 
     @staticmethod
     def from_float(module: Downsample2D):
-        int_module = INTDownSample2D()
-        int_module.conv = W8A8B8O8Conv2D16.from_float(module.conv, 1., 1.)
-        return int_module
+        module.conv = W8A8B8O8Conv2D16.from_float(module.conv, 1., 1.)
+
+        module.__class__ = INTDownSample2D
+        module = cast(INTDownSample2D,  module)
+        return module
     
 
 class INTCrossAttnDownBlock2D(CrossAttnDownBlock2D):
@@ -124,7 +213,7 @@ class INTDownBlock2D(DownBlock2D):
         return module
     
 
-class INTUpsample2D(torch.nn.Module):
+class INTUpsample2D(Upsample2D):
     def forward(self, hidden_states: torch.Tensor, output_size: Optional[int] = None, scale: float = 1.0):
         assert hidden_states.shape[1] == self.channels
 
@@ -138,9 +227,9 @@ class INTUpsample2D(torch.nn.Module):
         # if `output_size` is passed we force the interpolation output
         # size and do not make use of `scale_factor=2`
         if output_size is None:
-            hidden_states = F.interpolate(hidden_states, scale_factor=2.0, mode="nearest")
+            hidden_states = F.interpolate(hidden_states.to(dtype=torch.float16), scale_factor=2.0, mode="nearest").to(dtype=torch.int8)
         else:
-            hidden_states = F.interpolate(hidden_states, size=output_size, mode="nearest")
+            hidden_states = F.interpolate(hidden_states.to(dtype=torch.float16), size=output_size, mode="nearest").to(dtype=torch.int8)
 
         hidden_states = self.conv(hidden_states, scale)
 
@@ -149,9 +238,11 @@ class INTUpsample2D(torch.nn.Module):
 
     @staticmethod
     def from_float(module: Upsample2D):
-        int_module = INTUpsample2D()
-        int_module.conv = W8A8B8O8Conv2D16.from_float(module.conv, 1., 1.)
-        return int_module
+        module.conv = W8A8B8O8Conv2D16.from_float(module.conv, 1., 1.)
+        
+        module.__class__ = INTUpsample2D
+        module = cast(INTUpsample2D,  module)
+        return module
 
 
 class INTUpBlock2D(UpBlock2D):
@@ -443,8 +534,13 @@ class INTUNet2DConditionModel(UNet2DConditionModel):
         sample = self.conv_in(sample)
 
         # Start Quant
+        # import time
+        # torch.cuda.synchronize()
+        # start = time.time()
         original_dtype = sample.dtype
         sample = sample.to(dtype=torch.int8)
+        # torch.cuda.synchronize()
+        # print(f"Start Casting is {(time.time()-start)*1000} ms")
         
 
         # 2.5 GLIGEN position net
@@ -570,7 +666,11 @@ class INTUNet2DConditionModel(UNet2DConditionModel):
                 )
 
         # End of Quant
+        # torch.cuda.synchronize()
+        # start = time.time()
         sample = sample.to(dtype=original_dtype)
+        # torch.cuda.synchronize()
+        # print(f"End Casting is {(time.time()-start)*1000} ms")
 
         # 6. post-process
         if self.conv_norm_out:

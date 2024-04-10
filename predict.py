@@ -15,12 +15,18 @@ from quant.utils import LatencyLogger
 from quant.transformer_blocks import INTUNet2DConditionModel
 
 
-def get_trace_handler(test):
+def get_trace_handler(test, cpu=False):
     def trace_handler(prof):
-        file = open("./trace/" + test + ".txt", "w+")
+        sort_key = "self_cuda_time_total" if not cpu else "self_cpu_time_total"
+        if cpu:
+            file_name = f"./trace/{test}_self_cpu"
+        else:
+            file_name = f"./trace/{test}"
+
+        file = open(f"{file_name}.txt", "w+")
         print(prof.key_averages().table(
-            sort_by="self_cuda_time_total", row_limit=-1), file=file)
-        prof.export_chrome_trace("./trace/" + test + ".json")
+            sort_by=sort_key, row_limit=-1), file=file)
+        prof.export_chrome_trace(f"{file_name}.json")
     return trace_handler
 
 
@@ -45,7 +51,13 @@ class Predictor:
         #     local_files_only=True,
         # )
         self.pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", local_files_only=False, cache_dir="./weights")
-        self.pipe.to(torch_device="cuda", torch_dtype=torch.float16)
+        
+        if args.base_precision == "fp16":
+            self.pipe.to(torch_device="cuda", torch_dtype=torch.float16)
+        elif args.base_precision == "fp32":
+            pass
+        else:
+            assert False, f"{args.base_precision} is not supportted, only support [fp16, fp32]"
 
         self.record_path = {
             "itext": f"{args.forward_timed_dir}/itext.txt",
@@ -89,8 +101,8 @@ class Predictor:
         torch.cuda.synchronize()
         print(f"Inference Time: {(time.perf_counter()-start_time)*1000} ms")
 
+        output_paths = []
         if args.save_image:
-            output_paths = []
             result_dir = f"./sample/{datetime.datetime.now()}"
             os.makedirs(result_dir)
             for i, sample in enumerate(result):
@@ -111,6 +123,7 @@ class Predictor:
         seed = args.seed if args.seed is not None else int.from_bytes(os.urandom(2), "big")
         print(f"Using seed: {seed}")
         torch.manual_seed(seed)
+        profile_name = "quant_unet" if args.quant_unet else "original"
 
         torch.cuda.synchronize()
 
@@ -129,14 +142,14 @@ class Predictor:
             schedule=torch.profiler.schedule(
                 wait=2,
                 warmup=2,
-                active=6,
+                active=1,
                 repeat=1
             ),
-            on_trace_ready=get_trace_handler("original")
+            on_trace_ready=get_trace_handler(profile_name, args.sort_by_cpu)
             # on_trace_ready=torch.profiler.tensorboard_trace_handler('./log')
             # used when outputting for tensorboard
         ) as p:
-            for _ in range(10):
+            for _ in range(5):
                 result = self.pipe(
                     prompt=args.prompt,
                     width=args.width,
@@ -219,7 +232,7 @@ def parse_argument():
     parser.add_argument("--seed", type=int, default=None,
                         help="Random seed. Leave blank to randomize the seed.")
     
-    parser.add_argument("--repeat", type=int, default=1,
+    parser.add_argument("--repeat", type=int, default=4,
                     help="how many inference you like to do")
     parser.add_argument("--quant_text", type=bool, default=False,
                     help="quant text encoder")
@@ -232,13 +245,17 @@ def parse_argument():
     parser.add_argument("--forward_timed_dir", type=str, default="./module_latency",
                     help="whether to save record result")
     
-    parser.add_argument("--profile", type=bool, default=True,
+    parser.add_argument("--profile", type=bool, default=False,
                 help="enable profile")
+    parser.add_argument("--sort_by_cpu", type=bool, default=False,
+                help="profile table is sortted by self cpu or self gpu")
     parser.add_argument("--save_image", type=bool, default=False,
                 help="whether to save the result")
     
     parser.add_argument("--intensive_infer", type=bool, default=False,
                 help="intensive infer and profile")
+    parser.add_argument("--base_precision", type=str, default="fp16", choices=["fp16", "fp32"],
+                help="base LCM model precision")
 
     return parser.parse_args()
 
