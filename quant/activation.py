@@ -8,6 +8,8 @@ from diffusers.models.lora import LoRACompatibleLinear
 from diffusers.utils import USE_PEFT_BACKEND
 
 from torch_int.nn.linear import W8A8B8O8Linear
+import time
+
 
 class SiLUQ(nn.Module):
     r"""Applies the Sigmoid Linear Unit (SiLU) function, element-wise.
@@ -58,6 +60,8 @@ class SiLUQ(nn.Module):
 
 
 
+'''
+Original GEGLUQ
 class GEGLUQ(nn.Module):
     r"""
     A [variant](https://arxiv.org/abs/2002.05202) of the gated linear unit activation function.
@@ -81,6 +85,7 @@ class GEGLUQ(nn.Module):
         gate = gate.to(dtype=torch.float16)
         hidden_states = hidden_states * self.gelu(gate)
         hidden_states = hidden_states.to(dtype=torch.int8)
+
         return hidden_states
     
     @staticmethod
@@ -88,4 +93,4 @@ class GEGLUQ(nn.Module):
         int_geglu = GEGLUQ()
         int_geglu.proj = W8A8B8O8Linear.from_float(module.proj, 1. , 1.)
         return int_geglu
-
+'''

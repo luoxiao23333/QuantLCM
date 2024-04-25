@@ -9,7 +9,6 @@ from diffusers.models.attention_processor import (
     SpatialNorm
     )
 from diffusers.models.lora import LoRACompatibleLinear, LoRACompatibleConv
-from diffusers.models.activations import GEGLU
 from diffusers.models.attention import FeedForward, BasicTransformerBlock
 from diffusers.models.resnet import ResnetBlock2D, Downsample2D, Upsample2D
 from diffusers.models.unet_2d_blocks import CrossAttnDownBlock2D, DownBlock2D, UpBlock2D, CrossAttnUpBlock2D, UNetMidBlock2DCrossAttn
@@ -22,7 +21,7 @@ from diffusers.utils import logging
 
 from diffusers.utils import USE_PEFT_BACKEND
 
-from .activation import GEGLUQ, SiLUQ
+from .activation import SiLUQ
 from torch_int.nn.linear import W8A8B8O8Linear
 from torch_int.nn.conv import W8A8B8O8Conv2D16
 from torch_int.nn.fused import LayerNormQ, GroupNormQ
@@ -63,6 +62,7 @@ class INTResnetBlock2D(ResnetBlock2D):
         hidden_states = input_tensor
 
         if self.time_embedding_norm == "ada_group" or self.time_embedding_norm == "spatial":
+            # never reach here
             hidden_states = self.norm1(hidden_states, temb)
         else:
             hidden_states = self.norm1(hidden_states)
@@ -100,6 +100,7 @@ class INTResnetBlock2D(ResnetBlock2D):
 
         if self.time_emb_proj is not None:
             if not self.skip_time_act:
+                # will reach here
                 temb = self.nonlinearity(temb)
             temb = (
                 self.time_emb_proj(temb, scale)[:, :, None, None]
@@ -116,6 +117,7 @@ class INTResnetBlock2D(ResnetBlock2D):
             hidden_states = self.norm2(hidden_states)
 
         if temb is not None and self.time_embedding_norm == "scale_shift":
+            # Will not reach here
             scale, shift = torch.chunk(temb, 2, dim=1)
             hidden_states = hidden_states * (1 + scale) + shift
 
@@ -296,8 +298,8 @@ class INTUNetMidBlock2DCrossAttn(UNetMidBlock2DCrossAttn):
             INTResnetBlock2D.from_float(block) for block in module.resnets
         ])
 
-        module.__class__ = UNetMidBlock2DCrossAttn
-        module = cast(UNetMidBlock2DCrossAttn,  module)
+        module.__class__ = INTUNetMidBlock2DCrossAttn
+        module = cast(INTUNetMidBlock2DCrossAttn,  module)
         return module
     
 
@@ -690,6 +692,7 @@ class INTUNet2DConditionModel(UNet2DConditionModel):
 
     @staticmethod
     def from_float(module: UNet2DConditionModel) -> INTUNet2DConditionModel:
+
         module.down_blocks = torch.nn.ModuleList([
             INTCrossAttnDownBlock2D.from_float(module.down_blocks[0]),
             INTCrossAttnDownBlock2D.from_float(module.down_blocks[1]),

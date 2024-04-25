@@ -36,6 +36,20 @@ def get_latencies(filename):
     #     print(f"Layer: {layer}, Amount: {len(o_latency[layer])}, Total: {total[layer]:.3f} ms, Avg: {total[layer]/len(o_latency[layer]):.3f} ms")
     return o_latency
 
+def get_ordered_latencies(filename):
+    o_file = open(filename, "r")
+    latencies = []
+
+    begin = False
+    for line in o_file.readlines():
+        if 'No. 4'in line:
+            begin = True
+        if not begin:
+            continue
+        if 'class' in line:
+            latencies.append((line.split(">")[0].split(" ")[1][1:-1], float(line.split(">")[1].split(" ")[2])))
+    return latencies
+
 
 o_latencies = get_latencies("ounet.txt")
 i_latencies = get_latencies("iunet.txt")
@@ -80,3 +94,56 @@ for key, value in o_latencies.items():
 print(i_attn)
 print(o_attn)
 
+# i_ordered_latencies = get_ordered_latencies("iunet.txt")
+# print(i_ordered_latencies)
+# exit()
+
+def draw_latency_distribution_per_layer_type():
+    from matplotlib import pyplot as plt
+    for key, value in i_latencies.items():
+        if "diffuser" in key or "torch.nn" in key:
+            continue
+
+        plt.cla()
+
+        plt.title(f"{key} Latency")
+        plt.xlabel("Layer Index")
+        plt.ylabel("Latency (ms)")
+
+        plt.plot(value)
+        plt.scatter([list(range(len(value)))], value)
+
+        # if any(keyword in key for keyword in keywords):
+        assert len(value) % 4 == 0, f"{key} has {len(value)} layers in 4 steps"
+        step_delimeter = [int(len(value)*0.25), len(value)//2, int(len(value)*0.75)]
+        plt.scatter(step_delimeter, [value[index] for index in step_delimeter], c="r")
+
+        plt.savefig(f"latency_distribution/{key}.png")
+
+
+def print_latency_distribution_per_layer_order():
+    downblock_keys = ["INTCrossAttnDownBlock2D", "INTDownBlock2D"]
+    midblock_keys = ["INTUNetMidBlock2DCrossAttn"]
+    upblock_keys = ["INTCrossAttnUpBlock2D", "INTUpBlock2D"]
+
+    downblock_latency = 0
+    midblock_latency = 0
+    upblock_latency = 0
+
+    for key, value in i_latencies.items():
+        if any(keyword == key.split(".")[-1] for keyword in downblock_keys):
+            downblock_latency += sum(value)
+        if any(keyword == key.split(".")[-1] for keyword in midblock_keys):
+            midblock_latency += sum(value)
+        if any(keyword == key.split(".")[-1] for keyword in upblock_keys):
+            upblock_latency += sum(value)
+
+    print(f"downblocks latency is {downblock_latency} ms, midblock latency is {midblock_latency} ms,"
+          f"upblock latency is {upblock_latency} ms")
+    
+
+print_latency_distribution_per_layer_order()
+print("GEGLUQ VS GEGLU", sum(i_latencies["torch_int.nn.fused.GEGLUQ"]), sum(o_latencies["diffusers.models.activations.GEGLU"]))
+
+#print(sum(o_latencies["diffusers.models.activations.GEGLU"]))
+# draw_latency_distribution_per_layer_type()

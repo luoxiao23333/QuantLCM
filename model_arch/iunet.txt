@@ -1,0 +1,470 @@
+INTUNet2DConditionModel(
+  (conv_in): Conv2d(4, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (time_proj): Timesteps()
+  (time_embedding): TimestepEmbedding(
+    (linear_1): LoRACompatibleLinear(in_features=320, out_features=1280, bias=True)
+    (cond_proj): Linear(in_features=256, out_features=320, bias=False)
+    (act): SiLU()
+    (linear_2): LoRACompatibleLinear(in_features=1280, out_features=1280, bias=True)
+  )
+  (down_blocks): ModuleList(
+    (0): INTCrossAttnDownBlock2D(
+      (attentions): ModuleList(
+        (0-1): 2 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+        )
+      )
+      (downsamplers): ModuleList(
+        (0): INTDownSample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (1): INTCrossAttnDownBlock2D(
+      (attentions): ModuleList(
+        (0-1): 2 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (1): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+        )
+      )
+      (downsamplers): ModuleList(
+        (0): INTDownSample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (2): INTCrossAttnDownBlock2D(
+      (attentions): ModuleList(
+        (0-1): 2 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (1): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+        )
+      )
+      (downsamplers): ModuleList(
+        (0): INTDownSample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (3): INTDownBlock2D(
+      (resnets): ModuleList(
+        (0-1): 2 x INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+        )
+      )
+    )
+  )
+  (up_blocks): ModuleList(
+    (0): INTUpBlock2D(
+      (resnets): ModuleList(
+        (0-2): 3 x INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 2560, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+      )
+      (upsamplers): ModuleList(
+        (0): INTUpsample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (1): INTCrossAttnUpBlock2D(
+      (attentions): ModuleList(
+        (0-2): 3 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 2560, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (2): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 1920, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+      )
+      (upsamplers): ModuleList(
+        (0): INTUpsample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (2): INTCrossAttnUpBlock2D(
+      (attentions): ModuleList(
+        (0-2): 3 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 1920, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (1): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (2): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 960, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+      )
+      (upsamplers): ModuleList(
+        (0): INTUpsample2D(
+          (conv): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+    (3): INTCrossAttnUpBlock2D(
+      (attentions): ModuleList(
+        (0-2): 3 x INTTransFormer2DModel(
+          (norm): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-06, affine=True)
+          )
+          (proj_in): W8A8B8O8Conv2D16()
+          (transformer_blocks): ModuleList(
+            (0): INTBasicTransformerBlock(
+              (norm1): LayerNormQ()
+              (attn1): W8A8B8O8Attention()
+              (norm2): LayerNormQ()
+              (attn2): W8A8B8O8Attention()
+              (norm3): LayerNormQ()
+              (ff): INTFeedForward(
+                (net): ModuleList(
+                  (0): GEGLUQ(
+                    (proj): W8A8B8O8Linear()
+                  )
+                  (1): W8A8B8O8Linear()
+                )
+              )
+            )
+          )
+          (proj_out): W8A8B8O8Conv2D16()
+        )
+      )
+      (resnets): ModuleList(
+        (0): INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 960, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+        (1-2): 2 x INTResnetBlock2D(
+          (norm1): GroupNormQ(
+            (group_norm): GroupNorm(32, 640, eps=1e-05, affine=True)
+          )
+          (conv1): W8A8B8O8Conv2D16()
+          (time_emb_proj): W8A8B8O8Linear()
+          (norm2): GroupNormQ(
+            (group_norm): GroupNorm(32, 320, eps=1e-05, affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): W8A8B8O8Conv2D16()
+          (nonlinearity): SiLUQ()
+          (conv_shortcut): W8A8B8O8Conv2D16()
+        )
+      )
+    )
+  )
+  (mid_block): INTUNetMidBlock2DCrossAttn(
+    (attentions): ModuleList(
+      (0): INTTransFormer2DModel(
+        (norm): GroupNormQ(
+          (group_norm): GroupNorm(32, 1280, eps=1e-06, affine=True)
+        )
+        (proj_in): W8A8B8O8Conv2D16()
+        (transformer_blocks): ModuleList(
+          (0): INTBasicTransformerBlock(
+            (norm1): LayerNormQ()
+            (attn1): W8A8B8O8Attention()
+            (norm2): LayerNormQ()
+            (attn2): W8A8B8O8Attention()
+            (norm3): LayerNormQ()
+            (ff): INTFeedForward(
+              (net): ModuleList(
+                (0): GEGLUQ(
+                  (proj): W8A8B8O8Linear()
+                )
+                (1): W8A8B8O8Linear()
+              )
+            )
+          )
+        )
+        (proj_out): W8A8B8O8Conv2D16()
+      )
+    )
+    (resnets): ModuleList(
+      (0-1): 2 x INTResnetBlock2D(
+        (norm1): GroupNormQ(
+          (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+        )
+        (conv1): W8A8B8O8Conv2D16()
+        (time_emb_proj): W8A8B8O8Linear()
+        (norm2): GroupNormQ(
+          (group_norm): GroupNorm(32, 1280, eps=1e-05, affine=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (conv2): W8A8B8O8Conv2D16()
+        (nonlinearity): SiLUQ()
+      )
+    )
+  )
+  (conv_norm_out): GroupNorm(32, 320, eps=1e-05, affine=True)
+  (conv_act): SiLU()
+  (conv_out): Conv2d(320, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)

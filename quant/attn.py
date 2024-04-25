@@ -20,7 +20,7 @@ from diffusers.utils import logging
 
 from diffusers.utils import USE_PEFT_BACKEND
 
-from .activation import GEGLUQ
+from torch_int.nn.fused import GEGLUQ
 from torch_int.nn.linear import W8A8B8O8Linear
 from torch_int.nn.fused import LayerNormQ
 from torch_int.nn.attention import W8A8B8O8Attention

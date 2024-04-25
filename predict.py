@@ -30,6 +30,19 @@ def get_trace_handler(test, cpu=False):
     return trace_handler
 
 
+def scale_channel(scale_factor: float, model: torch.nn.Module):
+    for name, module in model.named_children():
+        if hasattr(module, "weight"):
+            if len(module.weight.shape) >= 2:
+                module.weight = torch.nn.Parameter(module.weight[:int(module.weight.shape[0]*scale_factor)][:int(module.weight.shape[1]*scale_factor)], requires_grad=False)
+            else:
+                module.weight = torch.nn.Parameter(module.weight[:int(module.weight.shape[0]*scale_factor)], requires_grad=False)
+        if hasattr(module, "bias") and module.bias is not None:
+            module.bias = torch.nn.Parameter(module.bias[:int(module.bias.shape[0]*scale_factor)], requires_grad=False)
+
+        scale_channel(scale_factor, module)
+
+
 class Predictor:
     def setup(self, args) -> None:
         """Load the model into memory to make running multiple predictions efficient"""
@@ -65,6 +78,9 @@ class Predictor:
             "iunet": f"{args.forward_timed_dir}/iunet.txt",
             "ounet": f"{args.forward_timed_dir}/ounet.txt"
         }
+        if args.channel_scale is not None:
+            for key in self.record_path.keys():
+                self.record_path[key] += f"_channelscale{args.channel_scale}"
 
         if args.quant_text == True:
             self.quant_text(args.record_text)
@@ -75,6 +91,12 @@ class Predictor:
             self.quant_unet(args.record_unet)
         elif args.record_unet == True:
             self.time_forward("unet")
+
+        if args.channel_scale is not None:
+            assert False, "Not Implemented"
+            if args.record_unet is False:
+                assert False
+            scale_channel(args.channel_scale, self.pipe.components["unet"])
 
 
     def predict(
@@ -124,6 +146,8 @@ class Predictor:
         print(f"Using seed: {seed}")
         torch.manual_seed(seed)
         profile_name = "quant_unet" if args.quant_unet else "original"
+        if args.channel_scale is not None:
+            profile_name += f"channelscale_{args.channel_scale}"
 
         torch.cuda.synchronize()
 
@@ -256,6 +280,17 @@ def parse_argument():
                 help="intensive infer and profile")
     parser.add_argument("--base_precision", type=str, default="fp16", choices=["fp16", "fp32"],
                 help="base LCM model precision")
+
+    def range_limited_float_type(arg):
+        try:
+            value = float(arg)
+        except ValueError:
+            raise parser.ArgumentTypeError("Value must be a floating point number")
+        if value <= 0 or value > 1:
+            raise parser.ArgumentTypeError("Value must be within the range (0, 1]")
+        return value
+    parser.add_argument("--channel_scale", type=range_limited_float_type, default=None,
+                help="set channel_scale")
 
     return parser.parse_args()
 
