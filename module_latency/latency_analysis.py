@@ -110,13 +110,33 @@ def draw_latency_distribution_per_layer_type():
         plt.xlabel("Layer Index")
         plt.ylabel("Latency (ms)")
 
+        assert len(value) % 4 == 0
+        value = value[:len(value)//4]
+
         plt.plot(value)
-        plt.scatter([list(range(len(value)))], value)
+        plt.scatter([list(range(len(value)))], value, label="Quant")
+
+        key_map = {
+            "quant.transformer_blocks.INTTransFormer2DModel": "diffusers.models.transformer_2d.Transformer2DModel",
+            "quant.transformer_blocks.INTResnetBlock2D": "diffusers.models.resnet.ResnetBlock2D",
+            "torch_int.nn.attention.W8A8B8O8Attention": "diffusers.models.attention_processor.Attention",
+            "quant.transformer_blocks.INTCrossAttnDownBlock2D": "diffusers.models.unet_2d_blocks.CrossAttnDownBlock2D",
+            "quant.transformer_blocks.INTDownSample2D": "diffusers.models.resnet.Downsample2D",
+            "quant.transformer_blocks.INTCrossAttnUpBlock2D": "diffusers.models.unet_2d_blocks.CrossAttnUpBlock2D",
+            "quant.transformer_blocks.INTUpSample2D": "diffusers.models.resnet.Upsample2D",
+        }
+
+        o_key = key_map.get(key, None)
+
+        if o_key is not None:
+            plt.plot(o_latencies[o_key][:len(value)], label="Vanilla")
+            plt.scatter([list(range(len(value)))], o_latencies[o_key][:len(value)])
+            plt.legend()
 
         # if any(keyword in key for keyword in keywords):
-        assert len(value) % 4 == 0, f"{key} has {len(value)} layers in 4 steps"
-        step_delimeter = [int(len(value)*0.25), len(value)//2, int(len(value)*0.75)]
-        plt.scatter(step_delimeter, [value[index] for index in step_delimeter], c="r")
+        # assert len(value) % 4 == 0, f"{key} has {len(value)} layers in 4 steps"
+        # step_delimeter = [int(len(value)*0.25), len(value)//2, int(len(value)*0.75)]
+        # plt.scatter(step_delimeter, [value[index] for index in step_delimeter], c="r")
 
         plt.savefig(f"latency_distribution/{key}.png")
 
@@ -142,8 +162,16 @@ def print_latency_distribution_per_layer_order():
           f"upblock latency is {upblock_latency} ms")
     
 
+l_k = "torch_int.nn.fused.GroupNormQ"
+for i in range(len(i_latencies[l_k])//4):
+    v = i_latencies[l_k][i]
+    if v > 0.2 or True:
+        print(f"{i+1}, {v}")
+exit()
+
 print_latency_distribution_per_layer_order()
 print("GEGLUQ VS GEGLU", sum(i_latencies["torch_int.nn.fused.GEGLUQ"]), sum(o_latencies["diffusers.models.activations.GEGLU"]))
 
-#print(sum(o_latencies["diffusers.models.activations.GEGLU"]))
-# draw_latency_distribution_per_layer_type()
+draw_latency_distribution_per_layer_type()
+
+# print(o_latencies["diffusers.models.resnet.ResnetBlock2D"])

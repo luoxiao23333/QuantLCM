@@ -115,6 +115,7 @@ def replace_with_time_forward(model: torch.nn.Module, filename):
         )
         torch.cuda.synchronize()
 
+
         # print(f"{self.__class__} take {time.perf_counter()-_time_forward_start_time} secs for forwarding")
         LatencyLogger.put(filename, f"{self.__class__} take {1000*(time.perf_counter()-_time_forward_start_time)} ms for forwarding")
         return ans

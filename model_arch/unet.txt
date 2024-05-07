@@ -461,7 +461,7 @@ UNet2DConditionModel(
     )
   )
   (mid_block): UNetMidBlock2DCrossAttn(
-    (attentions): ModuleList(
+    (attentions): ModuleList( 
       (0): Transformer2DModel(
         (norm): GroupNorm(32, 1280, eps=1e-06, affine=True)
         (proj_in): LoRACompatibleConv(1280, 1280, kernel_size=(1, 1), stride=(1, 1))

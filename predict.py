@@ -299,6 +299,20 @@ args = parse_argument()
 predictor = Predictor()
 predictor.setup(args)
 
+from diffusers.models.lora import LoRACompatibleLinear, LoRACompatibleConv
+from torch_int.nn.conv import W8A8B8O8Conv2D16
+from torch_int.nn.attention import W8A8B8O8Attention
+from torch_int.nn.linear import W8A8B8O8Linear
+from torch_int.nn.fused import GroupNormQ
+def print_model_with_lora(model):
+    idx = 1
+    for _, (name, module) in enumerate(model.named_modules()):
+        if isinstance(module, GroupNormQ):
+            print(f"{idx}: {name}")
+            idx += 1
+print_model_with_lora(predictor.pipe.components["unet"])
+exit()
+
 if args.intensive_infer:
     while True:
         predictor.predict(args)
